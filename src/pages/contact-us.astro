@@ -1,6 +1,7 @@
+
 ---
 import Layout from '../layouts/Layout.astro';
-
+ 
 // ==========================================
 // CONTACT PAGE SCHEMA (SEO/GEO)
 // ==========================================
@@ -26,12 +27,12 @@ const contactSchema = {
   }
 };
 ---
-
+ 
 <Layout title="Contact Us | Prime SteelTech India Pvt Ltd">
   
   <!-- INJECT STRUCTURED DATA FOR AI ENGINES -->
   <script type="application/ld+json" set:html={JSON.stringify(contactSchema)} />
-
+ 
   <main class="bg-[#2b332a] min-h-screen pt-20 pb-16 sm:pt-24 sm:pb-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       
@@ -46,7 +47,7 @@ const contactSchema = {
           Whether you need a custom engineering consultation, bulk order pricing, or technical support, our team is ready to assist.
         </p>
       </div>
-
+ 
       <!-- =========================================================================
            2. SPLIT CONTACT SECTION (Form + Details)
            ========================================================================= -->
@@ -76,7 +77,7 @@ const contactSchema = {
                       </p>
                     </div>
                   </div>
-
+ 
                   <!-- Phone Data + WhatsApp Button Integration -->
                   <div class="group flex items-start gap-6">
                     <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-sm bg-white/5 border border-white/10 group-hover:border-emerald-500/50 group-hover:bg-emerald-500/10 transition-colors">
@@ -96,7 +97,7 @@ const contactSchema = {
                       </a>
                     </div>
                   </div>
-
+ 
                   <!-- Email Data -->
                   <div class="group flex items-start gap-6">
                     <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-sm bg-white/5 border border-white/10 group-hover:border-emerald-500/50 group-hover:bg-emerald-500/10 transition-colors">
@@ -110,10 +111,10 @@ const contactSchema = {
                       </div>
                     </div>
                   </div>
-
+ 
                 </div>
               </div>
-
+ 
               <!-- Department Routing Card -->
               <div class="bg-zinc-900/40 border border-white/5 rounded-sm p-6">
                 <h3 class="text-white font-bold text-xs uppercase tracking-widest mb-4 border-b border-white/10 pb-3">Department Routing</h3>
@@ -129,20 +130,22 @@ const contactSchema = {
                 </div>
               </div>
             </div>
-
+ 
             <!-- RIGHT SIDE: B2B Contact Form (Fully Functional Web3Forms) -->
             <div class="bg-zinc-900/80 border border-white/10 rounded-sm p-8 sm:p-10 shadow-2xl backdrop-blur-sm relative">
               <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/10 rounded-bl-full pointer-events-none"></div>
-
+ 
               <h3 class="text-xl font-bold text-white uppercase tracking-wide mb-6">Submit Project Enquiry</h3>
               
-              <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5 font-jakarta">
+              <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-5 font-jakarta">
                 
                 <!-- Web3Forms Access Token Hook -->
                 <input type="hidden" name="access_key" value="d76b36cb-212f-45d8-b736-05fbb0a68950">
                 <!-- Antispam Honeypot Field -->
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
+                <!-- Hidden field to carry the full phone number with country code -->
+                <input type="hidden" name="phone" id="full-phone-contact">
+ 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div class="space-y-2">
                     <label for="firstName" class="text-xs font-bold text-zinc-400 uppercase tracking-wider block">First Name</label>
@@ -153,23 +156,46 @@ const contactSchema = {
                     <input type="text" id="lastName" name="last_name" class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-colors" placeholder="Doe" required />
                   </div>
                 </div>
-
+ 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div class="space-y-2">
                     <label for="company" class="text-xs font-bold text-zinc-400 uppercase tracking-wider block">Company Name</label>
                     <input type="text" id="company" name="company" class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-colors" placeholder="BuildCorp Inc." required />
                   </div>
+                  <!-- Phone: Country Code Selector + 10-digit Number -->
                   <div class="space-y-2">
-                    <label for="phone" class="text-xs font-bold text-zinc-400 uppercase tracking-wider block">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-colors" placeholder="+91 98765 43210" required />
+                    <label class="text-xs font-bold text-zinc-400 uppercase tracking-wider block">Phone Number</label>
+                    <div class="flex gap-2">
+                      <select id="dial-code-contact" class="bg-[#1e241d] border border-white/10 rounded-sm px-2 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 transition-colors appearance-none cursor-pointer shrink-0" style="min-width:100px;">
+                        <option value="+91" selected>🇮🇳 +91</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+971">🇦🇪 +971</option>
+                        <option value="+65">🇸🇬 +65</option>
+                        <option value="+61">🇦🇺 +61</option>
+                      </select>
+                      <input
+                        type="tel"
+                        id="phone-number-contact"
+                        class="w-full bg-white/5 border border-white/10 rounded-sm px-3 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-colors"
+                        placeholder="98765 43210"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        inputmode="numeric"
+                        required
+                      />
+                    </div>
+                    <p id="phone-error-contact" class="field-error-msg"></p>
+                    <p class="text-[11px] text-zinc-500">Enter 10-digit number without country code</p>
                   </div>
                 </div>
-
+ 
                 <div class="space-y-2">
-                  <label for="email" class="text-xs font-bold text-zinc-400 uppercase tracking-wider block">Corporate Email</label>
-                  <input type="email" id="email" name="email" class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-colors" placeholder="john@buildcorp.com" required />
+                  <label for="email-contact" class="text-xs font-bold text-zinc-400 uppercase tracking-wider block">Corporate Email</label>
+                  <input type="email" id="email-contact" name="email" class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-colors" placeholder="john@buildcorp.com" required />
+                  <p id="email-error-contact" class="field-error-msg"></p>
                 </div>
-
+ 
                 <div class="space-y-2 relative">
                   <label for="interest" class="text-xs font-bold text-zinc-400 uppercase tracking-wider block">Primary Interest</label>
                   <div class="relative">
@@ -185,21 +211,21 @@ const contactSchema = {
                     </div>
                   </div>
                 </div>
-
+ 
                 <div class="space-y-2">
                   <label for="message" class="text-xs font-bold text-zinc-400 uppercase tracking-wider block">Project Details / Requirements</label>
                   <textarea id="message" name="project_details" rows="4" class="w-full bg-white/5 border border-white/10 rounded-sm px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:bg-white/10 transition-colors resize-none" placeholder="Please provide dimensions, load requirements, or specific logistics needs..."></textarea>
                 </div>
-
+ 
                 <button type="submit" class="w-full h-14 mt-4 flex items-center justify-center rounded-sm bg-emerald-500 px-8 text-sm font-extrabold text-[#2b332a] shadow-[0_0_20px_rgba(52,211,153,0.2)] hover:bg-white hover:scale-[1.02] transition-all duration-300 uppercase tracking-widest">
                   Submit Enquiry
                 </button>
               </form>
-
+ 
             </div>
-
+ 
           </div>
-
+ 
           <!-- =========================================================================
                3. INDUSTRIAL MAP SECTION
                ========================================================================= -->
@@ -219,18 +245,109 @@ const contactSchema = {
               </iframe>
             </div>
           </div>
-
+ 
         </div>
       </section>
-
+ 
     </div>
   </main>
 </Layout>
-
+ 
 <style is:global>
   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
   
   .font-jakarta {
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
+ 
+  input.input-error,
+  select.input-error {
+    border-color: #f87171 !important;
+  }
+  .field-error-msg {
+    color: #f87171;
+    font-size: 11px;
+    margin-top: 4px;
+    display: none;
+  }
+  .field-error-msg.visible {
+    display: block;
+  }
 </style>
+ 
+<script>
+  const BLOCKED_DOMAINS = [
+    'mailinator.com','guerrillamail.com','tempmail.com','throwaway.email',
+    'yopmail.com','trashmail.com','sharklasers.com','guerrillamailblock.com',
+    'grr.la','guerrillamail.info','guerrillamail.biz','guerrillamail.de',
+    'guerrillamail.net','guerrillamail.org','spam4.me','getairmail.com',
+    'fakeinbox.com','maildrop.cc','dispostable.com','mailnull.com',
+    'spamgourmet.com','spamgourmet.net','spamgourmet.org'
+  ];
+ 
+  const BLOCKED_LOCAL_PARTS = [
+    'test','demo','fake','user','admin','null','abc','xyz','asdf',
+    'qwerty','temp','noreply','no-reply','donotreply','example','sample'
+  ];
+ 
+  function validateEmail(email: string): string | null {
+    const parts = email.toLowerCase().split('@');
+    if (parts.length !== 2) return 'Please enter a valid email address.';
+    const [local, domain] = parts;
+    if (BLOCKED_DOMAINS.includes(domain)) return 'Disposable email addresses are not accepted. Please use a corporate email.';
+    if (BLOCKED_LOCAL_PARTS.includes(local)) return 'Please enter a real corporate email address.';
+    if (local.length < 2) return 'Please enter a valid email address.';
+    return null;
+  }
+ 
+  function validatePhone(number: string): string | null {
+    const cleaned = number.replace(/\s/g, '');
+    if (!/^[0-9]{10}$/.test(cleaned)) return 'Please enter exactly 10 digits (no spaces or dashes).';
+    if (/^(.)\1{9}$/.test(cleaned)) return 'Please enter a valid phone number.';
+    return null;
+  }
+ 
+  function showError(fieldId: string, msgId: string, message: string) {
+    document.getElementById(fieldId)?.classList.add('input-error');
+    const msg = document.getElementById(msgId);
+    if (msg) { msg.textContent = message; msg.classList.add('visible'); }
+  }
+ 
+  function clearError(fieldId: string, msgId: string) {
+    document.getElementById(fieldId)?.classList.remove('input-error');
+    const msg = document.getElementById(msgId);
+    if (msg) { msg.textContent = ''; msg.classList.remove('visible'); }
+  }
+ 
+  document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+    let valid = true;
+ 
+    // Phone validation
+    const phoneVal = (document.getElementById('phone-number-contact') as HTMLInputElement)?.value || '';
+    const phoneError = validatePhone(phoneVal);
+    if (phoneError) {
+      e.preventDefault(); valid = false;
+      showError('phone-number-contact', 'phone-error-contact', phoneError);
+    } else {
+      clearError('phone-number-contact', 'phone-error-contact');
+      const dialCode = (document.getElementById('dial-code-contact') as HTMLSelectElement)?.value || '+91';
+      const fullPhone = document.getElementById('full-phone-contact') as HTMLInputElement;
+      if (fullPhone) fullPhone.value = dialCode + ' ' + phoneVal;
+    }
+ 
+    // Email validation
+    const emailVal = (document.getElementById('email-contact') as HTMLInputElement)?.value || '';
+    const emailError = validateEmail(emailVal);
+    if (emailError) {
+      e.preventDefault(); valid = false;
+      showError('email-contact', 'email-error-contact', emailError);
+    } else {
+      clearError('email-contact', 'email-error-contact');
+    }
+  });
+ 
+  // Strip non-digits from phone input as user types
+  document.getElementById('phone-number-contact')?.addEventListener('input', function(this: HTMLInputElement) {
+    this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+  });
+</script>
