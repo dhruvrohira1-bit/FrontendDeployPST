@@ -1,5 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ringlockOpt1 from '../assets/products/Ringlock Option 1.jpeg';
+import walkway from '../assets/products/walkway plank.jpg';
+import staircase from '../assets/products/(updated) Staircase Tower with clean background.jpg';
+
+
+
 ---
 
 <Layout title="Buyer's Guides | Prime Steel Tech">
@@ -59,7 +65,7 @@ import Layout from '../layouts/Layout.astro';
         flex items-end p-8">
 
           <img
-          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600"
+          src={ringlockOpt1.src}
           class="absolute inset-0 h-full w-full object-cover
           group-hover:scale-105 transition duration-700" />
 
@@ -104,7 +110,7 @@ import Layout from '../layouts/Layout.astro';
         flex items-end p-8">
 
           <img
-          src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1600"
+          src={walkway.src}
           class="absolute inset-0 h-full w-full object-cover
           group-hover:scale-105 transition duration-700" />
 
@@ -149,7 +155,7 @@ import Layout from '../layouts/Layout.astro';
         flex items-end p-8">
 
           <img
-          src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600"
+          src={staircase.src}
           class="absolute inset-0 h-full w-full object-cover
           group-hover:scale-105 transition duration-700" />
 
