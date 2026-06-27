@@ -371,56 +371,58 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
 
 <Layout title="Scaffolding Standards | Prime SteelTech India Pvt Ltd">
 
-  <main style="background:#050f09; min-height:100vh; color:white; font-family:'Plus Jakarta Sans',sans-serif;">
-
-    <!-- Ambient glow -->
-    <div style="position:fixed; top:0; left:50%; transform:translateX(-50%); width:100%; max-width:900px; height:400px; background:radial-gradient(ellipse at center top, rgba(16,185,129,0.07), transparent 70%); pointer-events:none; z-index:0;"></div>
+  <main style="background:#f8fafc; min-height:100vh; color:#0f172a; font-family:'Plus Jakarta Sans',sans-serif;">
 
     <!-- ── Page Header ───────────────────────────────────────── -->
-    <section style="position:relative; z-index:1; padding:5rem 1.5rem 3.5rem; text-align:center; border-bottom:1px solid #1a3024;">
-      <div style="display:inline-block; font-size:0.65rem; font-weight:700; letter-spacing:0.18em; color:#10b981; text-transform:uppercase; border:1px solid #065f46; padding:4px 14px; border-radius:2px; margin-bottom:1.25rem;">
-        Technical Reference
+    <section style="position:relative; z-index:1; padding:5rem 1.5rem 3.5rem; text-align:center; border-bottom:1px solid #e2e8f0; background:white;">
+      <!-- Top accent bar -->
+      <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(to right, #059669, #0d9488, #059669);"></div>
+
+      <div style="display:inline-flex; align-items:center; gap:6px; font-size:0.65rem; font-weight:700; letter-spacing:0.18em; color:#059669; text-transform:uppercase; border:1px solid #d1fae5; background:#f0fdf4; padding:4px 14px; border-radius:9999px; margin-bottom:1.25rem;">
+        <svg width="10" height="10" viewBox="0 0 20 20" fill="#059669"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+        Technical Reference Library
       </div>
-      <h1 style="font-size:clamp(2rem,5vw,3.5rem); font-weight:900; letter-spacing:-0.02em; line-height:1.1; color:white; max-width:680px; margin:0 auto 1rem;">
-        Global Scaffolding <span style="color:#10b981;">Standards</span>
+
+      <h1 style="font-size:clamp(2rem,5vw,3.5rem); font-weight:900; letter-spacing:-0.02em; line-height:1.1; color:#0f172a; text-transform:uppercase; max-width:680px; margin:0 auto 1rem;">
+        Global Scaffolding <span style="color:#059669;">Standards</span>
       </h1>
-      <p style="font-size:1rem; color:#4d7a5a; max-width:520px; margin:0 auto; line-height:1.7;">
+      <p style="font-size:1rem; color:#64748b; max-width:520px; margin:0 auto; line-height:1.7;">
         Browse and read the international regulatory standards that govern scaffolding design, erection, and safety compliance — viewable directly within this platform.
       </p>
     </section>
 
     <!-- ── Search Bar ────────────────────────────────────────── -->
-    <section style="position:relative; z-index:1; padding:0 1.5rem 2.5rem; max-width:700px; margin:0 auto;">
+    <section style="position:relative; z-index:1; padding:2rem 1.5rem 1.5rem; max-width:700px; margin:0 auto;">
       <div style="position:relative;">
         <div style="position:absolute; top:0; bottom:0; left:18px; display:flex; align-items:center; pointer-events:none;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
         </div>
         <input
           type="text"
           id="standards-search"
           autocomplete="off"
           placeholder="Search 'couplers', 'safety', 'pipes', 'erection'..."
-          style="width:100%; box-sizing:border-box; padding:16px 18px 16px 50px; background:#0a1a10; border:1px solid #1a3024; border-radius:4px; color:white; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem; outline:none;"
+          style="width:100%; box-sizing:border-box; padding:16px 18px 16px 50px; background:white; border:1px solid #e2e8f0; border-radius:4px; color:#0f172a; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem; outline:none; box-shadow:0 1px 3px rgba(0,0,0,0.08);"
         />
       </div>
     </section>
 
     <!-- ── Notice Bar ────────────────────────────────────────── -->
-    <div style="position:relative; z-index:1; background:rgba(16,185,129,0.05); border-bottom:1px solid #065f46; padding:10px 1.5rem; text-align:center; font-size:0.8rem; color:#86efac; display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap;">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      Standards are provided for reference only and are <strong style="color:#34d399;">&nbsp;view-only</strong>. Downloading or reproducing these documents is not permitted.
+    <div style="position:relative; z-index:1; background:#f0fdf4; border-bottom:1px solid #bbf7d0; padding:10px 1.5rem; text-align:center; font-size:0.8rem; color:#15803d; display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      Standards are provided for reference only and are <strong style="color:#059669;">&nbsp;view-only</strong>. Downloading or reproducing these documents is not permitted.
     </div>
 
     <!-- ── Region Filters ────────────────────────────────────── -->
     <div style="position:relative; z-index:1; padding:2rem 1.5rem 0; max-width:1200px; margin:0 auto;">
-      <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#4d7a5a; margin-bottom:8px;">Region</div>
+      <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#64748b; margin-bottom:8px;">Region</div>
       <div id="region-filters" style="display:flex; flex-wrap:wrap; gap:8px;">
         {regions.map((r) => (
           <button
             class="filter-btn"
             data-region={r}
             type="button"
-            style={`background:transparent; border:1px solid ${r === 'All' ? '#10b981' : '#1a3024'}; color:${r === 'All' ? '#10b981' : '#4d7a5a'}; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:7px 16px; border-radius:2px; cursor:pointer;`}
+            style={`background:transparent; border:1px solid ${r === 'All' ? '#059669' : '#e2e8f0'}; color:${r === 'All' ? '#059669' : '#64748b'}; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:7px 16px; border-radius:2px; cursor:pointer;`}
           >
             {r}
           </button>
@@ -430,14 +432,14 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
 
     <!-- ── Type Filters ──────────────────────────────────────── -->
     <div style="position:relative; z-index:1; padding:1.25rem 1.5rem 0; max-width:1200px; margin:0 auto;">
-      <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#4d7a5a; margin-bottom:8px;">Standard Type</div>
+      <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#64748b; margin-bottom:8px;">Standard Type</div>
       <div id="type-filters" style="display:flex; flex-wrap:wrap; gap:8px;">
         {types.map((t) => (
           <button
             class="type-filter-btn"
             data-type={t}
             type="button"
-            style={`background:transparent; border:1px solid ${t === 'All' ? '#10b981' : '#1a3024'}; color:${t === 'All' ? '#10b981' : '#4d7a5a'}; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:7px 16px; border-radius:2px; cursor:pointer;`}
+            style={`background:transparent; border:1px solid ${t === 'All' ? '#059669' : '#e2e8f0'}; color:${t === 'All' ? '#059669' : '#64748b'}; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:7px 16px; border-radius:2px; cursor:pointer;`}
           >
             {t}
           </button>
@@ -447,12 +449,12 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
 
     <!-- ── Result Count / No Results ───────────────────────────── -->
     <div style="position:relative; z-index:1; padding:1.5rem 1.5rem 0; max-width:1200px; margin:0 auto;">
-      <div id="standards-result-count" style="text-align:center; font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#4d7a5a;">
+      <div id="standards-result-count" style="text-align:center; font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#94a3b8;">
         Showing all {standards.length} standards
       </div>
-      <div id="standards-no-results" style="display:none; text-align:center; padding:3rem 1rem; margin-top:1rem; background:rgba(255,255,255,0.03); border:1px solid #1a3024; border-radius:4px;">
-        <p style="color:white; font-weight:700; margin-bottom:6px;">No matching standards found</p>
-        <p style="color:#4d7a5a; font-size:0.85rem;">Try a different keyword like "couplers", "safety", "pipes", "scaffolding" or "erection".</p>
+      <div id="standards-no-results" style="display:none; text-align:center; padding:3rem 1rem; margin-top:1rem; background:white; border:1px solid #e2e8f0; border-radius:4px;">
+        <p style="color:#0f172a; font-weight:700; margin-bottom:6px;">No matching standards found</p>
+        <p style="color:#64748b; font-size:0.85rem;">Try a different keyword like "couplers", "safety", "pipes", "scaffolding" or "erection".</p>
       </div>
     </div>
 
@@ -461,7 +463,7 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
       {
         Array.from(new Set(standards.map((s) => s.region))).map((region) => (
           <div class="region-group" data-region-group={region} style="margin-bottom:3rem;">
-            <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#4d7a5a; border-left:3px solid #065f46; padding-left:10px; margin-bottom:1rem;">
+            <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#64748b; border-left:3px solid #059669; padding-left:10px; margin-bottom:1rem;">
               {region}
             </div>
             <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px;">
@@ -477,20 +479,20 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
                     data-type={s.type}
                     role="button"
                     tabindex="0"
-                    style="background:#0a1a10; border:1px solid #1a3024; border-radius:4px; padding:18px 20px; cursor:pointer; display:flex; flex-direction:column; gap:8px; position:relative; overflow:hidden; transition:border-color 0.2s, background 0.2s;"
+                    style="background:white; border:1px solid #e2e8f0; border-radius:4px; padding:18px 20px; cursor:pointer; display:flex; flex-direction:column; gap:8px; position:relative; overflow:hidden; transition:border-color 0.2s, background 0.2s; box-shadow:0 1px 3px rgba(0,0,0,0.06);"
                   >
-                    <div class="card-accent" style="position:absolute; left:0; top:0; bottom:0; width:3px; background:#10b981; transform:scaleY(0); transform-origin:bottom; transition:transform 0.2s;"></div>
+                    <div class="card-accent" style="position:absolute; left:0; top:0; bottom:0; width:3px; background:#059669; transform:scaleY(0); transform-origin:bottom; transition:transform 0.2s;"></div>
                     <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:8px;">
-                      <span style="font-size:1rem; font-weight:800; color:#34d399; letter-spacing:-0.01em; line-height:1.2;">{s.code}</span>
+                      <span style="font-size:1rem; font-weight:800; color:#0f172a; letter-spacing:-0.01em; line-height:1.2;">{s.code}</span>
                       <span style="font-size:1.2rem; flex-shrink:0;">{s.flag}</span>
                     </div>
-                    <div style="font-size:0.8rem; color:white; font-weight:500; line-height:1.5;">{s.title}</div>
-                    <div style="font-size:0.7rem; color:#4d7a5a; letter-spacing:0.02em;">{s.body}</div>
+                    <div style="font-size:0.8rem; color:#475569; font-weight:500; line-height:1.5;">{s.title}</div>
+                    <div style="font-size:0.7rem; color:#94a3b8; letter-spacing:0.02em;">{s.body}</div>
                     <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:4px;">
-                      <span style="font-size:0.6rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#10b981; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.25); padding:3px 8px; border-radius:2px;">
+                      <span style="font-size:0.6rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#059669; background:#f0fdf4; border:1px solid #bbf7d0; padding:3px 8px; border-radius:2px;">
                         {s.type}
                       </span>
-                      <div style="display:flex; align-items:center; gap:6px; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#10b981;">
+                      <div style="display:flex; align-items:center; gap:6px; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#059669;">
                         View
                         <svg class="cta-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                       </div>
@@ -505,33 +507,32 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
     </div>
 
     <!-- ── PDF Viewer Modal ───────────────────────────────────── -->
-    <div id="pdf-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); z-index:9999; align-items:center; justify-content:center; padding:16px; backdrop-filter:blur(4px);">
-      <div style="background:#081410; border:1px solid #22a15a; border-radius:6px; width:100%; max-width:1000px; height:90vh; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 0 60px rgba(16,185,129,0.12);">
+    <div id="pdf-modal" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.75); z-index:9999; align-items:center; justify-content:center; padding:16px; backdrop-filter:blur(4px);">
+      <div style="background:white; border:1px solid #e2e8f0; border-radius:6px; width:100%; max-width:1000px; height:90vh; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.2);">
 
         <!-- Modal Header -->
-        <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 18px; border-bottom:1px solid #1a3024; flex-shrink:0; gap:12px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:12px 18px; border-bottom:1px solid #e2e8f0; background:#f8fafc; flex-shrink:0; gap:12px;">
           <div style="display:flex; align-items:center; gap:10px; min-width:0;">
-            <span id="modal-code" style="font-size:0.85rem; font-weight:800; color:#34d399; white-space:nowrap;"></span>
-            <span id="modal-name" style="font-size:0.75rem; color:#4d7a5a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"></span>
+            <span id="modal-code" style="font-size:0.85rem; font-weight:800; color:#059669; white-space:nowrap;"></span>
+            <span id="modal-name" style="font-size:0.75rem; color:#64748b; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"></span>
           </div>
           <div style="display:flex; align-items:center; gap:8px; flex-shrink:0;">
             <div style="display:flex; align-items:center; gap:5px; font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#ef4444; border:1px solid rgba(239,68,68,0.3); padding:4px 10px; border-radius:2px; background:rgba(239,68,68,0.06);">
               <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
               View Only
             </div>
-            <button id="modal-close" style="background:transparent; border:1px solid #1a3024; color:#4d7a5a; font-size:1.2rem; line-height:1; width:32px; height:32px; border-radius:3px; cursor:pointer; display:flex; align-items:center; justify-content:center;">×</button>
+            <button id="modal-close" style="background:transparent; border:1px solid #e2e8f0; color:#94a3b8; font-size:1.2rem; line-height:1; width:32px; height:32px; border-radius:3px; cursor:pointer; display:flex; align-items:center; justify-content:center;">×</button>
           </div>
         </div>
 
         <!-- PDF Area -->
-        <div style="flex:1; position:relative; overflow:hidden; background:#111;">
+        <div style="flex:1; position:relative; overflow:hidden; background:#f1f5f9;">
           <!-- Loading spinner -->
-          <div id="pdf-loading" style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; z-index:3; background:#0a1a10;">
-            <div id="pdf-spinner" style="width:34px; height:34px; border:3px solid #1a3024; border-top-color:#10b981; border-radius:50;"></div>
-            <p style="font-size:0.8rem; color:#4d7a5a; margin:0;">Loading document…</p>
+          <div id="pdf-loading" style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; z-index:3; background:white;">
+            <div id="pdf-spinner" style="width:34px; height:34px; border:3px solid #e2e8f0; border-top-color:#059669; border-radius:50%;"></div>
+            <p style="font-size:0.8rem; color:#94a3b8; margin:0;">Loading document…</p>
           </div>
-          <!-- Transparent overlay — blocks right-click & drag -->
-          
+
           <!-- PDF iframe -->
           <iframe id="pdf-frame" title="PDF Viewer" style="position:absolute; inset:0; width:100%; height:100%; border:none; z-index:1;"></iframe>
         </div>
@@ -546,9 +547,10 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
 <style is:global>
   /* Card hover states */
   .std-card:hover {
-    border-color: #22a15a !important;
-    background: #0d2016 !important;
+    border-color: #059669 !important;
+    background: #f0fdf4 !important;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(5,150,105,0.1) !important;
   }
   .std-card:hover .card-accent {
     transform: scaleY(1) !important;
@@ -569,25 +571,25 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
 
   /* Filter button hover */
   .filter-btn:hover {
-    border-color: #10b981 !important;
-    color: #10b981 !important;
-    background: rgba(16,185,129,0.07) !important;
+    border-color: #059669 !important;
+    color: #059669 !important;
+    background: rgba(5,150,105,0.07) !important;
   }
 
   /* Type filter button hover */
   .type-filter-btn:hover {
-    border-color: #10b981 !important;
-    color: #10b981 !important;
-    background: rgba(16,185,129,0.07) !important;
+    border-color: #059669 !important;
+    color: #059669 !important;
+    background: rgba(5,150,105,0.07) !important;
   }
 
   /* Search input focus state */
   #standards-search:focus {
-    border-color: #10b981 !important;
-    box-shadow: 0 0 0 3px rgba(16,185,129,0.15);
+    border-color: #059669 !important;
+    box-shadow: 0 0 0 3px rgba(5,150,105,0.15);
   }
   #standards-search::placeholder {
-    color: #4d7a5a;
+    color: #94a3b8;
   }
 
   /* Modal close button hover */
@@ -619,13 +621,13 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
 
     function setActiveBtn(btnList, activeBtn) {
       btnList.forEach((b) => {
-        b.style.borderColor = '#1a3024';
-        b.style.color = '#4d7a5a';
+        b.style.borderColor = '#e2e8f0';
+        b.style.color = '#64748b';
         b.style.background = 'transparent';
       });
-      activeBtn.style.borderColor = '#10b981';
-      activeBtn.style.color = '#10b981';
-      activeBtn.style.background = 'rgba(16,185,129,0.07)';
+      activeBtn.style.borderColor = '#059669';
+      activeBtn.style.color = '#059669';
+      activeBtn.style.background = 'rgba(5,150,105,0.07)';
     }
 
     function applyFilters() {
@@ -691,7 +693,6 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
     const loading = document.getElementById('pdf-loading');
     const mCode   = document.getElementById('modal-code');
     const mName   = document.getElementById('modal-name');
-    
 
     function openModal(file, code, name) {
       mCode.textContent = code;
@@ -701,8 +702,7 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
       modal.style.display = 'flex';
       document.body.style.overflow = 'hidden';
       requestAnimationFrame(() => {
-       const fullUrl = window.location.origin + file;
-       frame.src = '/pdfjs/web/viewer.html?file=' + encodeURIComponent(file)  ;
+        frame.src = '/pdfjs/web/viewer.html?file=' + file;
       });
     }
 
@@ -738,8 +738,6 @@ const types = ["All", ...typeOrder.filter((t) => standards.some((s) => s.type ==
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
     });
-
-
 
   });
 </script>
