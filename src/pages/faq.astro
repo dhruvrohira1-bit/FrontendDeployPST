@@ -48,91 +48,116 @@ const faqSchema = {
 };
 ---
 
-<Layout title="Scaffolding & Formwork FAQ | Prime SteelTech India Pvt Ltd">
+<Layout 
+  title="Scaffolding & Formwork FAQ | Prime SteelTech India"
+  description="Search our engineering knowledge base for answers regarding Ringlock scaffolding, load capacities, walkway planks, logistics, and OSHA/BIS compliance."
+>
 
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
-  <main class="bg-[#2b332a] min-h-screen pt-20 pb-24">
+  <main class="bg-slate-50 min-h-screen pt-24 pb-24 font-jakarta">
 
-    <section class="relative pt-16 sm:pt-24 pb-12 border-b border-white/5 text-center overflow-hidden">
+    <!-- ==========================================
+         HERO & SEARCH SECTION (Glassmorphism)
+         ========================================== -->
+    <section class="relative pt-12 pb-12 border-b border-slate-200 text-center overflow-hidden">
+      <!-- Background Ambient Glow -->
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-30 pointer-events-none"></div>
 
       <div class="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-4 py-2 text-[11px] font-semibold text-emerald-400 uppercase tracking-widest mb-6 shadow-[0_0_15px_rgba(52,211,153,0.1)]">
+        
+        <div class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-[11px] font-bold text-emerald-800 uppercase tracking-widest mb-6 shadow-sm">
+          <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           Knowledge Base · {faqs.length} Answers
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight mb-6">
-          How can we <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">help you?</span>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 uppercase tracking-tight mb-6 drop-shadow-sm">
+          How can we <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-700">help you?</span>
         </h1>
-        <p class="font-jakarta text-zinc-300 text-sm sm:text-base leading-relaxed font-medium mb-10">
+        
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-medium mb-10">
           Type your keywords below to instantly filter our engineering database.
         </p>
 
+        <!-- Glassmorphism Search Bar -->
         <div class="relative max-w-2xl mx-auto group">
-          <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-            <svg class="h-5 w-5 text-emerald-500 group-focus-within:text-emerald-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none z-20">
+            <svg class="h-5 w-5 text-emerald-600 group-focus-within:text-emerald-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </div>
           <input
             type="text"
             id="faq-search"
-            class="block w-full pl-12 pr-4 py-5 bg-zinc-900/80 border border-white/10 rounded-sm text-white font-jakarta text-sm sm:text-base placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 shadow-2xl backdrop-blur-md transition-all"
+            class="block w-full pl-12 pr-4 py-5 bg-white/70 backdrop-blur-xl border border-white rounded-xl text-slate-900 font-medium text-sm sm:text-base placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 shadow-[0_15px_40px_rgba(0,0,0,0.06)] transition-all relative z-10"
             placeholder="Search for 'load capacity', 'shipping', 'OSHA'..."
             autocomplete="off"
           />
         </div>
+
       </div>
     </section>
 
-    <section class="pt-10 pb-2 relative z-10">
+    <!-- ==========================================
+         FILTER PILLS
+         ========================================== -->
+    <section class="pt-10 pb-4 relative z-10">
       <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div id="category-pills" class="flex flex-wrap justify-center gap-2 sm:gap-3">
+        <div id="category-pills" class="flex flex-wrap justify-center gap-2.5 sm:gap-3">
           <button
             type="button"
-            class="category-pill active-pill px-4 py-2 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-widest border transition-all bg-emerald-500 border-emerald-500 text-[#1a2419]"
+            class="category-pill active-pill px-5 py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-widest transition-all bg-emerald-600 text-white shadow-md border border-emerald-600"
             data-category="all"
           >
-            All <span class="opacity-70 font-semibold">({faqs.length})</span>
+            All <span class="opacity-80 font-semibold ml-1">({faqs.length})</span>
           </button>
+          
           {categories.map((cat) => (
             <button
               type="button"
-              class="category-pill px-4 py-2 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-widest border border-white/10 bg-white/5 text-zinc-300 hover:border-emerald-500/40 hover:text-emerald-300 transition-all"
+              class="category-pill px-5 py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-widest border border-slate-300 bg-white text-slate-600 hover:border-emerald-400 hover:text-emerald-700 shadow-sm transition-all"
               data-category={cat.name}
             >
-              {cat.name} <span class="opacity-70 font-semibold">({cat.count})</span>
+              {cat.name} <span class="opacity-70 font-semibold ml-1">({cat.count})</span>
             </button>
           ))}
         </div>
       </div>
     </section>
 
-    <section class="py-10 relative z-10">
+    <!-- ==========================================
+         FAQ ACCORDION GRID
+         ========================================== -->
+    <section class="py-8 relative z-10">
       <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
 
-        <div id="result-count" class="text-center text-zinc-500 text-xs font-jakarta font-medium uppercase tracking-widest mb-6">
+        <div id="result-count" class="text-center text-slate-500 text-xs font-bold uppercase tracking-widest mb-6">
           Showing all {faqs.length} answers
         </div>
 
-        <div id="no-results" class="hidden text-center py-12 bg-white/5 border border-white/10 rounded-sm">
-          <svg class="h-12 w-12 text-zinc-600 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <h3 class="text-lg font-bold text-white uppercase tracking-wide mb-2">No matching answers found</h3>
-          <p class="font-jakarta text-zinc-400 text-sm mb-6">Our system couldn't find an exact match for your search.</p>
+        <!-- No Results State -->
+        <div id="no-results" class="hidden text-center py-16 bg-white border border-slate-200 rounded-xl shadow-sm">
+          <div class="w-16 h-16 bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="h-8 w-8 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-black text-slate-900 uppercase tracking-wide mb-2">No matching answers found</h3>
+          <p class="text-slate-500 text-sm mb-8 font-medium">Our system couldn't find an exact match for your search.</p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/contact-us" class="inline-flex h-10 items-center justify-center rounded-sm bg-emerald-500 px-6 text-xs font-extrabold text-[#2b332a] shadow-md hover:bg-white transition-all uppercase tracking-widest">
+            <a href="/contact-us" class="inline-flex h-12 items-center justify-center rounded-sm bg-emerald-600 px-6 text-xs font-bold text-white shadow-md hover:bg-emerald-700 transition-all uppercase tracking-widest">
               Contact Engineering Support
             </a>
-            <a href="tel:+919393161504" class="inline-flex h-10 items-center justify-center rounded-sm border border-emerald-500/50 bg-transparent px-6 text-xs font-extrabold text-emerald-400 shadow-md hover:bg-emerald-500/10 transition-all uppercase tracking-widest">
+            <a href="tel:+919393161504" class="inline-flex h-12 items-center justify-center rounded-sm border-2 border-slate-300 bg-white px-6 text-xs font-bold text-slate-700 shadow-sm hover:border-emerald-500 hover:text-emerald-700 transition-all uppercase tracking-widest">
               Call: +91 9393161504
             </a>
           </div>
         </div>
 
+        <!-- FAQ List -->
         <div id="faq-container" class="space-y-4">
           {faqs.map((faq, index) => {
             const slug = slugify(faq.question);
             return (
               <div
-                class="faq-item group bg-zinc-900/50 border border-white/10 rounded-sm overflow-hidden transition-all duration-300 hover:border-emerald-500/30"
+                class="faq-item group bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-emerald-400 hover:shadow-[0_8px_20px_rgba(0,0,0,0.04)] shadow-sm"
                 data-category={faq.category}
                 id={`faq-${slug}`}
               >
@@ -141,23 +166,24 @@ const faqSchema = {
                   class="faq-toggle w-full flex items-center justify-between p-5 sm:p-6 text-left focus:outline-none"
                   aria-expanded="false"
                 >
-                  <div class="pr-8">
-                    <span class="block text-[10px] font-bold text-emerald-400 uppercase tracking-widest mb-1">{faq.category}</span>
-                    <h2 class="text-sm sm:text-base font-bold text-white uppercase tracking-wide group-hover:text-emerald-300 transition-colors">{faq.question}</h2>
+                  <div class="pr-6">
+                    <span class="block text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1.5">{faq.category}</span>
+                    <h2 class="text-sm sm:text-base font-bold text-slate-800 uppercase tracking-wide group-hover:text-emerald-700 transition-colors leading-snug">{faq.question}</h2>
                   </div>
-                  <div class="shrink-0 h-8 w-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors">
-                    <svg class="icon-plus h-4 w-4 text-emerald-400 block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                    <svg class="icon-minus h-4 w-4 text-emerald-400 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/></svg>
+                  <div class="shrink-0 h-8 w-8 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-emerald-50 group-hover:border-emerald-200 transition-colors">
+                    <svg class="icon-plus h-4 w-4 text-emerald-600 block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                    <svg class="icon-minus h-4 w-4 text-emerald-600 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M20 12H4"/></svg>
                   </div>
                 </button>
 
                 <div class="faq-answer hidden px-5 sm:px-6 pb-6 pt-2">
-                  <div class="h-px w-full bg-white/5 mb-4"></div>
-                  <p class="font-jakarta text-zinc-300 text-sm leading-relaxed border-l-2 border-emerald-500 pl-4">
+                  <div class="h-px w-full bg-slate-100 mb-5"></div>
+                  <p class="text-slate-600 text-sm leading-relaxed border-l-2 border-emerald-500 pl-4 font-medium">
                     {faq.answer}
                   </p>
                 </div>
 
+                <!-- Hidden data block for the search engine -->
                 <span class="search-data hidden">{faq.question.toLowerCase()} {faq.answer.toLowerCase()} {faq.category.toLowerCase()}</span>
               </div>
             );
@@ -179,7 +205,9 @@ const faqSchema = {
 </style>
 
 <script>
+  // ========================================================
   // 1. ACCORDION LOGIC
+  // ========================================================
   const toggles = document.querySelectorAll('.faq-toggle');
 
   toggles.forEach(toggle => {
@@ -189,7 +217,7 @@ const faqSchema = {
       const iconMinus = toggle.querySelector('.icon-minus');
       const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
 
-      // Close all other open FAQs
+      // Close all other open FAQs smoothly
       document.querySelectorAll('.faq-answer').forEach(ans => {
         if (ans !== answer) {
           ans.classList.add('hidden');
@@ -216,7 +244,9 @@ const faqSchema = {
     });
   });
 
-  // 2. LIVE SEARCH + CATEGORY FILTER LOGIC (combined)
+  // ========================================================
+  // 2. LIVE SEARCH + CATEGORY FILTER LOGIC
+  // ========================================================
   const searchInput = document.getElementById('faq-search') as HTMLInputElement;
   const faqItems = document.querySelectorAll<HTMLElement>('.faq-item');
   const noResultsDiv = document.getElementById('no-results');
@@ -259,19 +289,21 @@ const faqSchema = {
     }
   }
 
+  // Trigger search on typing
   searchInput?.addEventListener('input', applyFilters);
 
+  // Trigger category change on pill click
   pills.forEach(pill => {
     pill.addEventListener('click', () => {
       activeCategory = pill.getAttribute('data-category') || 'all';
 
-      // Update active pill styling
+      // Update active pill styling for Light Theme
       pills.forEach(p => {
-        p.classList.remove('active-pill', 'bg-emerald-500', 'border-emerald-500', 'text-[#1a2419]');
-        p.classList.add('bg-white/5', 'border-white/10', 'text-zinc-300');
+        p.classList.remove('active-pill', 'bg-emerald-600', 'border-emerald-600', 'text-white', 'shadow-md');
+        p.classList.add('bg-white', 'border-slate-300', 'text-slate-600', 'shadow-sm');
       });
-      pill.classList.add('active-pill', 'bg-emerald-500', 'border-emerald-500', 'text-[#1a2419]');
-      pill.classList.remove('bg-white/5', 'border-white/10', 'text-zinc-300');
+      pill.classList.add('active-pill', 'bg-emerald-600', 'border-emerald-600', 'text-white', 'shadow-md');
+      pill.classList.remove('bg-white', 'border-slate-300', 'text-slate-600', 'shadow-sm');
 
       applyFilters();
     });

@@ -45,41 +45,42 @@ const rentalsSchema = {
   <!-- INJECT STRUCTURED DATA FOR AI ENGINES -->
   <script type="application/ld+json" set:html={JSON.stringify(rentalsSchema)} />
 
-  <main class="bg-[#050f09] min-h-screen text-white overflow-hidden pt-24 pb-16">
+  <main class="bg-slate-50 min-h-screen text-slate-900 overflow-hidden pt-24 pb-16 font-jakarta">
     
     <!-- ==========================================
          1. HERO SECTION (SEO Optimized H1)
          ========================================== -->
-    <section class="relative pt-12 pb-20 border-b border-emerald-500/10 z-10 text-center">
-      <!-- Background Effects -->
-      <div class="absolute inset-0 bg-[linear-gradient(to_right,#10b98105_1px,transparent_1px),linear-gradient(to_bottom,#10b98105_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
-      <div class="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[300px] bg-emerald-500/15 blur-[120px] rounded-full pointer-events-none"></div>
+    <section class="relative pt-12 pb-20 border-b border-slate-200 z-10 text-center">
+      <!-- Background Effects (Light Industrial Grid) -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-30"></div>
+      <div class="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[300px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         
-        <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2 text-[10px] sm:text-xs font-semibold text-emerald-400 uppercase tracking-widest mb-6 shadow-[0_0_20px_rgba(16,185,129,0.15)]">
-          <span class="flex h-2 w-2 shrink-0 rounded-full bg-emerald-400 animate-pulse"></span>
+        <!-- Glassmorphism Badge -->
+        <div class="inline-flex items-center gap-2 rounded-full border border-emerald-600/30 bg-white/60 backdrop-blur-md px-4 py-2 text-[10px] sm:text-xs font-bold text-emerald-700 uppercase tracking-widest mb-6 shadow-sm">
+          <span class="flex h-2 w-2 shrink-0 rounded-full bg-emerald-500 animate-pulse"></span>
           <span>Premium Industrial Equipment Hire</span>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white uppercase leading-[1.1] mb-6">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 uppercase leading-[1.1] mb-6">
           Heavy-Duty Scaffolding<br class="hidden sm:block"/>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-500">Staircase Tower</span> Rentals
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-700">Staircase Tower</span> Rentals
         </h1>
 
-        <p class="font-jakarta text-sm sm:text-base lg:text-lg leading-relaxed text-zinc-300 max-w-3xl mx-auto mb-10 font-medium">
-          Give your workforce safe and efficient access to every level of your project without investing in permanent equipment
+        <p class="text-sm sm:text-base lg:text-lg leading-relaxed text-slate-600 max-w-3xl mx-auto mb-2 font-medium">
+          Give your workforce safe and efficient access to every level of your project without investing in permanent equipment.
         </p>
-        <p class="font-jakarta text-sm sm:text-base lg:text-lg leading-relaxed text-zinc-300 max-w-3xl mx-auto mb-10 font-medium">
-          Available for short-term and long-term rental across India 
+        <p class="text-sm sm:text-base lg:text-lg leading-relaxed text-slate-600 max-w-3xl mx-auto mb-10 font-bold">
+          Available for short-term and long-term rental across India.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-5 max-w-2xl mx-auto">
-          <a href="tel:+919393161504" class="relative group w-full sm:w-auto inline-flex h-14 items-center justify-center gap-3 rounded-sm bg-gradient-to-r from-emerald-500 to-teal-400 px-10 text-sm font-black text-[#050f09] shadow-[0_0_30px_rgba(16,185,129,0.4)] hover:shadow-[0_0_50px_rgba(16,185,129,0.6)] hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest">
+          <a href="tel:+919393161504" class="relative group w-full sm:w-auto inline-flex h-14 items-center justify-center gap-3 rounded-sm bg-emerald-600 px-10 text-sm font-black text-white shadow-[0_8px_20px_rgba(16,185,129,0.3)] hover:bg-emerald-500 hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest">
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
             Call to Check Availability
           </a>
-          <a href="#rental-process" class="w-full sm:w-auto inline-flex h-14 items-center justify-center gap-2 rounded-sm border-2 border-emerald-500/30 bg-[#0a170e] px-10 text-sm font-bold text-emerald-400 hover:bg-emerald-500 hover:text-[#050f09] hover:border-emerald-500 transition-all duration-300 uppercase tracking-widest">
+          <a href="#rental-process" class="w-full sm:w-auto inline-flex h-14 items-center justify-center gap-2 rounded-sm border-2 border-slate-300 bg-white/60 backdrop-blur-sm px-10 text-sm font-bold text-slate-700 hover:bg-slate-100 hover:border-emerald-500 hover:text-emerald-700 transition-all duration-300 uppercase tracking-widest shadow-sm">
             View Rental Process
           </a>
         </div>
@@ -87,51 +88,51 @@ const rentalsSchema = {
     </section>
 
     <!-- ==========================================
-         2. VALUE PROPOSITION (Why Rent?)
+         2. VALUE PROPOSITION (Glassmorphism Cards)
          ========================================== -->
-    <section class="py-20 relative bg-[#0a170e] border-b border-emerald-500/10">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section class="py-20 relative bg-slate-100 border-b border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="text-center mb-16">
-          <h2 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight mb-4">
-            Why Rent From <span class="text-emerald-400">Prime SteelTech?</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 uppercase tracking-tight mb-4">
+            Why Rent From <span class="text-emerald-600">Prime SteelTech?</span>
           </h2>
-          <p class="font-jakarta text-zinc-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-            Buying access equipment isn't always the smartest option. Renting allows you to get certified, ready-to-use Staircase Towers exactly when you need them without the burden of ownership, storage, or maintenance
+          <p class="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed font-medium">
+            Buying access equipment isn't always the smartest option. Renting allows you to get certified, ready-to-use Staircase Towers exactly when you need them without the burden of ownership, storage, or maintenance.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Benefit 1 -->
-          <div class="bg-[#050f09] border border-white/5 rounded-sm p-8 shadow-lg hover:border-emerald-500/30 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] transition-all duration-300 group">
-            <div class="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <!-- Glass Card 1 -->
+          <div class="bg-white/60 backdrop-blur-xl border border-white rounded-xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:border-emerald-400 hover:shadow-[0_8px_30px_rgba(16,185,129,0.1)] transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+              <svg class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
-            <h3 class="text-white font-bold uppercase tracking-wider mb-3">Save Capital</h3>
-            <p class="font-jakarta text-sm text-zinc-400 leading-relaxed">
-              Avoid large upfront investments.Pay only for the duration of your project and keep your working capital available for core operations
+            <h3 class="text-slate-900 font-bold uppercase tracking-wider mb-3">Save Capital</h3>
+            <p class="text-sm text-slate-600 leading-relaxed font-medium">
+              Avoid large upfront investments. Pay only for the duration of your project and keep your working capital available for core operations.
             </p>
           </div>
 
-          <!-- Benefit 2 -->
-          <div class="bg-[#050f09] border border-white/5 rounded-sm p-8 shadow-lg hover:border-emerald-500/30 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] transition-all duration-300 group">
-            <div class="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          <!-- Glass Card 2 -->
+          <div class="bg-white/60 backdrop-blur-xl border border-white rounded-xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:border-emerald-400 hover:shadow-[0_8px_30px_rgba(16,185,129,0.1)] transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+              <svg class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
             </div>
-            <h3 class="text-white font-bold uppercase tracking-wider mb-3">Ready to Deploy</h3>
-            <p class="font-jakarta text-sm text-zinc-400 leading-relaxed">
-              All rental units are inspected, maintained, and site-ready before dispatch. Receive equipment that's ready to perform from day one
+            <h3 class="text-slate-900 font-bold uppercase tracking-wider mb-3">Ready to Deploy</h3>
+            <p class="text-sm text-slate-600 leading-relaxed font-medium">
+              All rental units are inspected, maintained, and site-ready before dispatch. Receive equipment that's ready to perform from day one.
             </p>
           </div>
 
-          <!-- Benefit 3 -->
-          <div class="bg-[#050f09] border border-white/5 rounded-sm p-8 shadow-lg hover:border-emerald-500/30 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] transition-all duration-300 group">
-            <div class="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <!-- Glass Card 3 -->
+          <div class="bg-white/60 backdrop-blur-xl border border-white rounded-xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:border-emerald-400 hover:shadow-[0_8px_30px_rgba(16,185,129,0.1)] transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-full bg-emerald-100 border border-emerald-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-sm">
+              <svg class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
-            <h3 class="text-white font-bold uppercase tracking-wider mb-3">Safer Access</h3>
-            <p class="font-jakarta text-sm text-zinc-400 leading-relaxed">
-              Designed to improve worker movement between levels while supporting safer site operations and compliance requirements
+            <h3 class="text-slate-900 font-bold uppercase tracking-wider mb-3">Safer Access</h3>
+            <p class="text-sm text-slate-600 leading-relaxed font-medium">
+              Designed to improve worker movement between levels while supporting safer site operations and compliance requirements.
             </p>
           </div>
         </div>
@@ -141,56 +142,63 @@ const rentalsSchema = {
     <!-- ==========================================
          3. EXCLUSIVE RENTAL PRODUCT (The Tower)
          ========================================== -->
-    <section class="py-20 sm:py-32 relative bg-[#050f09] overflow-hidden border-b border-emerald-500/10">
+    <section class="py-20 sm:py-32 relative bg-white overflow-hidden border-b border-slate-200">
       <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/5 blur-[150px] rounded-full pointer-events-none"></div>
 
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           <!-- Image -->
-          <div class="relative w-full aspect-[4/3] rounded-sm bg-zinc-900 border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden group">
-            <Image src={finalImg} alt="Rent Staircase Towers" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-all duration-700 ease-out" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+          <div class="relative w-full aspect-[4/3] rounded-lg bg-slate-100 border border-slate-200 shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden group">
+            <Image src={finalImg} alt="Rent Staircase Towers" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
             <div class="absolute bottom-6 left-6 right-6">
-              <span class="inline-block bg-emerald-500 text-[#050f09] text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-sm mb-2">Available for Hire</span>
+              <span class="inline-block bg-emerald-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-sm mb-2 shadow-sm">Available for Hire</span>
             </div>
           </div>
 
           <!-- Content -->
           <div class="flex flex-col">
-            <h2 class="text-3xl sm:text-4xl font-black text-white uppercase tracking-tight mb-6 leading-tight">
-              The Asset:<br/> <span class="text-emerald-400">Industrial Staircase Towers</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 uppercase tracking-tight mb-6 leading-tight">
+              The Asset:<br/> <span class="text-emerald-700">Industrial Staircase Towers</span>
             </h2>
-            <p class="font-jakarta text-zinc-300 text-sm sm:text-base leading-relaxed mb-8">
-              Built for projects where safe and efficient vertical access is critical.Our Staircase Towers provide dedicated access routes for workers, helping reduce congestion, improve movement across levels, and support safer site operations
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8 font-medium">
+              Built for projects where safe and efficient vertical access is critical. Our Staircase Towers provide dedicated access routes for workers, helping reduce congestion, improve movement across levels, and support safer site operations.
             </p>
             
-            <ul class="space-y-4 mb-10">
-              <li class="flex items-start gap-3">
-                <svg class="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <ul class="space-y-6 mb-10">
+              <li class="flex items-start gap-4">
+                <div class="bg-emerald-100 p-2 rounded-full shrink-0 mt-0.5 shadow-sm">
+                  <svg class="h-4 w-4 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                </div>
                 <div>
-                  <span class="text-white font-bold uppercase tracking-widest text-xs block mb-1">Fast Worker Movement</span>
-                  <span class="font-jakarta text-sm text-zinc-400">Wide stair flights and landings help workers move quickly and comfortably between levels</span>
+                  <span class="text-slate-900 font-black uppercase tracking-widest text-xs block mb-1">Fast Worker Movement</span>
+                  <span class="text-sm text-slate-600 font-medium">Wide stair flights and landings help workers move quickly and comfortably between levels.</span>
                 </div>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <li class="flex items-start gap-4">
+                <div class="bg-emerald-100 p-2 rounded-full shrink-0 mt-0.5 shadow-sm">
+                  <svg class="h-4 w-4 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                </div>
                 <div>
-                  <span class="text-white font-bold uppercase tracking-widest text-xs block mb-1">Flexible Heights</span>
-                  <span class="font-jakarta text-sm text-zinc-400">Modular design allows towers to be configured according to project requirements</span>
+                  <span class="text-slate-900 font-black uppercase tracking-widest text-xs block mb-1">Flexible Heights</span>
+                  <span class="text-sm text-slate-600 font-medium">Modular design allows towers to be configured according to your exact project requirements.</span>
                 </div>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <li class="flex items-start gap-4">
+                <div class="bg-emerald-100 p-2 rounded-full shrink-0 mt-0.5 shadow-sm">
+                  <svg class="h-4 w-4 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                </div>
                 <div>
-                  <span class="text-white font-bold uppercase tracking-widest text-xs block mb-1">Built for Safety</span>
-                  <span class="font-jakarta text-sm text-zinc-400">Supplied with handrails, guardrails, and anti-slip walking surfaces for safer access at height</span>
+                  <span class="text-slate-900 font-black uppercase tracking-widest text-xs block mb-1">Built for Safety</span>
+                  <span class="text-sm text-slate-600 font-medium">Supplied with handrails, guardrails, and anti-slip walking surfaces for safer access at height.</span>
                 </div>
               </li>
             </ul>
 
-            <a href="/quote" class="inline-flex h-14 w-full sm:w-auto items-center justify-center gap-2 rounded-sm bg-emerald-500/10 border border-emerald-500/30 px-8 text-sm font-bold text-emerald-400 hover:bg-emerald-500 hover:text-[#050f09] transition-all duration-300 uppercase tracking-widest text-center shadow-[0_0_20px_rgba(16,185,129,0.1)]">
-              Request Rental Quote &rarr;
+            <!-- Replaced Quote with Contact Sales -->
+            <a href="/contact-us" class="inline-flex h-14 w-full sm:w-auto items-center justify-center gap-2 rounded-sm bg-slate-900 px-8 text-sm font-bold text-white hover:bg-emerald-600 transition-all duration-300 uppercase tracking-widest text-center shadow-lg">
+              Get in Touch with Sales &rarr;
             </a>
           </div>
 
@@ -199,48 +207,48 @@ const rentalsSchema = {
     </section>
 
     <!-- ==========================================
-         4. RENTAL PROCESS TIMELINE
+         4. RENTAL PROCESS TIMELINE (Glassmorphism)
          ========================================== -->
-    <section id="rental-process" class="py-20 bg-[#0a170e] border-b border-emerald-500/10 relative overflow-hidden">
+    <section id="rental-process" class="py-20 bg-slate-50 border-b border-slate-200 relative overflow-hidden">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="text-center mb-16">
-          <h2 class="text-3xl font-black text-white uppercase tracking-tight mb-4">
-            How The <span class="text-emerald-400">Rental Process</span> Works
+          <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight mb-4">
+            How The <span class="text-emerald-600">Rental Process</span> Works
           </h2>
-          <p class="font-jakarta text-zinc-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-            A simple process designed to get your site operational quickly
+          <p class="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed font-medium">
+            A simple, transparent process designed to get your site operational quickly.
           </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- Step 1 -->
-          <div class="bg-[#050f09] border border-white/5 rounded-sm p-6 relative group overflow-hidden">
-            <div class="absolute -right-4 -top-8 text-8xl font-black text-white/5 group-hover:text-emerald-500/10 transition-colors pointer-events-none select-none">1</div>
-            <h3 class="text-emerald-400 font-black uppercase tracking-wider mb-2 text-lg">Requirement Discussion</h3>
-            <p class="font-jakarta text-zinc-400 text-sm leading-relaxed">Share your project details, height requirements, and site conditions.Our team will recommend the most suitable configuration</p>
+          <div class="bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-md hover:border-emerald-300 rounded-xl p-6 relative group overflow-hidden transition-all">
+            <div class="absolute -right-4 -top-8 text-8xl font-black text-slate-100 group-hover:text-emerald-50 transition-colors pointer-events-none select-none">1</div>
+            <h3 class="text-emerald-700 font-black uppercase tracking-wider mb-2 text-lg relative z-10">Requirement Discussion</h3>
+            <p class="text-slate-600 text-sm leading-relaxed font-medium relative z-10">Share your project details, height requirements, and site conditions. Our team will recommend the most suitable configuration.</p>
           </div>
 
           <!-- Step 2 -->
-          <div class="bg-[#050f09] border border-white/5 rounded-sm p-6 relative group overflow-hidden">
-            <div class="absolute -right-4 -top-8 text-8xl font-black text-white/5 group-hover:text-emerald-500/10 transition-colors pointer-events-none select-none">2</div>
-            <h3 class="text-emerald-400 font-black uppercase tracking-wider mb-2 text-lg">Quotation & Planning</h3>
-            <p class="font-jakarta text-zinc-400 text-sm leading-relaxed">Receive a clear commercial proposal including rental duration, logistics, and deployment details</p>
+          <div class="bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-md hover:border-emerald-300 rounded-xl p-6 relative group overflow-hidden transition-all">
+            <div class="absolute -right-4 -top-8 text-8xl font-black text-slate-100 group-hover:text-emerald-50 transition-colors pointer-events-none select-none">2</div>
+            <h3 class="text-emerald-700 font-black uppercase tracking-wider mb-2 text-lg relative z-10">Commercial Plan</h3>
+            <p class="text-slate-600 text-sm leading-relaxed font-medium relative z-10">Receive a clear commercial proposal including rental duration, logistics, and deployment details.</p>
           </div>
 
           <!-- Step 3 -->
-          <div class="bg-[#050f09] border border-white/5 rounded-sm p-6 relative group overflow-hidden">
-            <div class="absolute -right-4 -top-8 text-8xl font-black text-white/5 group-hover:text-emerald-500/10 transition-colors pointer-events-none select-none">3</div>
-            <h3 class="text-emerald-400 font-black uppercase tracking-wider mb-2 text-lg">Delivery & Installation</h3>
-            <p class="font-jakarta text-zinc-400 text-sm leading-relaxed">Equipment is dispatched to your site and installed by your team or approved erection partners</p>
+          <div class="bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-md hover:border-emerald-300 rounded-xl p-6 relative group overflow-hidden transition-all">
+            <div class="absolute -right-4 -top-8 text-8xl font-black text-slate-100 group-hover:text-emerald-50 transition-colors pointer-events-none select-none">3</div>
+            <h3 class="text-emerald-700 font-black uppercase tracking-wider mb-2 text-lg relative z-10">Delivery & Install</h3>
+            <p class="text-slate-600 text-sm leading-relaxed font-medium relative z-10">Equipment is dispatched to your site and installed by your team or approved erection partners.</p>
           </div>
 
           <!-- Step 4 -->
-          <div class="bg-[#050f09] border border-white/5 rounded-sm p-6 relative group overflow-hidden">
-            <div class="absolute -right-4 -top-8 text-8xl font-black text-white/5 group-hover:text-emerald-500/10 transition-colors pointer-events-none select-none">4</div>
-            <h3 class="text-emerald-400 font-black uppercase tracking-wider mb-2 text-lg">Project Completion</h3>
-            <p class="font-jakarta text-zinc-400 text-sm leading-relaxed">Once the project is complete, the equipment is dismantled and returned as per the rental agreement</p>
+          <div class="bg-white/70 backdrop-blur-md border border-white shadow-sm hover:shadow-md hover:border-emerald-300 rounded-xl p-6 relative group overflow-hidden transition-all">
+            <div class="absolute -right-4 -top-8 text-8xl font-black text-slate-100 group-hover:text-emerald-50 transition-colors pointer-events-none select-none">4</div>
+            <h3 class="text-emerald-700 font-black uppercase tracking-wider mb-2 text-lg relative z-10">Project Completion</h3>
+            <p class="text-slate-600 text-sm leading-relaxed font-medium relative z-10">Once the project is complete, the equipment is dismantled and returned as per the rental agreement.</p>
           </div>
 
         </div>
@@ -249,43 +257,44 @@ const rentalsSchema = {
     </section>
 
     <!-- ==========================================
-         5. RE-VAMPED LOCAL SEO COVERAGE AREAS
+         5. RE-VAMPED LOCAL SEO COVERAGE AREAS (Dark Break)
          ========================================== -->
-    <section class="py-20 bg-[#050f09] border-b border-white/5 relative">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section class="py-20 bg-[#064E3B] border-y border-slate-900 relative shadow-inner overflow-hidden">
+      <!-- Texture overlay -->
+      <div class="absolute inset-0 opacity-10 mix-blend-overlay grayscale">
+        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2000&auto=format&fit=crop" alt="Industrial Background" class="w-full h-full object-cover" />
+      </div>
+
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="text-center mb-12">
           <h2 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight mb-4">Rental <span class="text-emerald-400">Coverage Areas</span></h2>
-          <p class="font-jakarta text-zinc-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-            Headquartered in Mumbai, Maharashtra, India, Prime SteelTech provides rapid-dispatch staircase tower rentals across major western infrastructure hubs. We guarantee fast logistics to keep your site moving without delays.
+          <p class="text-emerald-100 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed font-medium">
+            Headquartered in Mumbai, Prime SteelTech provides rapid-dispatch staircase tower rentals across major western infrastructure hubs. We guarantee fast logistics to keep your site moving.
           </p>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          <!-- City Card 1 -->
-          <div class="bg-[#0a170e] border border-white/10 rounded-sm p-6 text-center hover:border-emerald-500/50 hover:bg-emerald-500/5 hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] transition-all group">
-            <span class="block w-2 h-2 mx-auto bg-emerald-500 rounded-full mb-4 shadow-[0_0_10px_rgba(16,185,129,0.8)] group-hover:animate-ping"></span>
-            <h4 class="text-white font-bold uppercase tracking-widest text-xs sm:text-sm">Mumbai &<br/>MMR Region</h4>
+          <!-- Glass Dark Cards -->
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 text-center hover:bg-white/20 hover:border-emerald-300 transition-all shadow-lg group">
+            <span class="block w-2 h-2 mx-auto bg-emerald-400 rounded-full mb-4 shadow-[0_0_10px_rgba(52,211,153,0.8)] group-hover:animate-ping"></span>
+            <h4 class="text-white font-bold uppercase tracking-widest text-xs sm:text-sm drop-shadow-md">Mumbai &<br/>MMR Region</h4>
           </div>
-          <!-- City Card 2 -->
-          <div class="bg-[#0a170e] border border-white/10 rounded-sm p-6 text-center hover:border-emerald-500/50 hover:bg-emerald-500/5 hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] transition-all group">
-            <span class="block w-2 h-2 mx-auto bg-emerald-500 rounded-full mb-4 shadow-[0_0_10px_rgba(16,185,129,0.8)] group-hover:animate-ping"></span>
-            <h4 class="text-white font-bold uppercase tracking-widest text-xs sm:text-sm">Thane &<br/>Navi Mumbai</h4>
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 text-center hover:bg-white/20 hover:border-emerald-300 transition-all shadow-lg group">
+            <span class="block w-2 h-2 mx-auto bg-emerald-400 rounded-full mb-4 shadow-[0_0_10px_rgba(52,211,153,0.8)] group-hover:animate-ping"></span>
+            <h4 class="text-white font-bold uppercase tracking-widest text-xs sm:text-sm drop-shadow-md">Thane &<br/>Navi Mumbai</h4>
           </div>
-          <!-- City Card 3 -->
-          <div class="bg-[#0a170e] border border-white/10 rounded-sm p-6 text-center hover:border-emerald-500/50 hover:bg-emerald-500/5 hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] transition-all group">
-            <span class="block w-2 h-2 mx-auto bg-emerald-500 rounded-full mb-4 shadow-[0_0_10px_rgba(16,185,129,0.8)] group-hover:animate-ping"></span>
-            <h4 class="text-white font-bold uppercase tracking-widest text-xs sm:text-sm">Pune &<br/>PCMC Zones</h4>
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 text-center hover:bg-white/20 hover:border-emerald-300 transition-all shadow-lg group">
+            <span class="block w-2 h-2 mx-auto bg-emerald-400 rounded-full mb-4 shadow-[0_0_10px_rgba(52,211,153,0.8)] group-hover:animate-ping"></span>
+            <h4 class="text-white font-bold uppercase tracking-widest text-xs sm:text-sm drop-shadow-md">Pune &<br/>PCMC Zones</h4>
           </div>
-          <!-- City Card 4 -->
-          <div class="bg-[#0a170e] border border-white/10 rounded-sm p-6 text-center hover:border-emerald-500/50 hover:bg-emerald-500/5 hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] transition-all group">
-            <span class="block w-2 h-2 mx-auto bg-emerald-500 rounded-full mb-4 shadow-[0_0_10px_rgba(16,185,129,0.8)] group-hover:animate-ping"></span>
-            <h4 class="text-white font-bold uppercase tracking-widest text-xs sm:text-sm">Gujarat<br/>(Surat/Ahm)</h4>
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 text-center hover:bg-white/20 hover:border-emerald-300 transition-all shadow-lg group">
+            <span class="block w-2 h-2 mx-auto bg-emerald-400 rounded-full mb-4 shadow-[0_0_10px_rgba(52,211,153,0.8)] group-hover:animate-ping"></span>
+            <h4 class="text-white font-bold uppercase tracking-widest text-xs sm:text-sm drop-shadow-md">Gujarat<br/>(Surat/Ahm)</h4>
           </div>
-          <!-- City Card 5 -->
-          <div class="bg-[#0a170e] border border-white/10 rounded-sm p-6 text-center hover:border-emerald-500/50 hover:bg-emerald-500/5 hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] transition-all group col-span-2 lg:col-span-1">
-            <span class="block w-2 h-2 mx-auto bg-emerald-500 rounded-full mb-4 shadow-[0_0_10px_rgba(16,185,129,0.8)] group-hover:animate-ping"></span>
-            <h4 class="text-white font-bold uppercase tracking-widest text-xs sm:text-sm">Goa<br/>Infrastructure</h4>
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 text-center hover:bg-white/20 hover:border-emerald-300 transition-all shadow-lg group col-span-2 lg:col-span-1">
+            <span class="block w-2 h-2 mx-auto bg-emerald-400 rounded-full mb-4 shadow-[0_0_10px_rgba(52,211,153,0.8)] group-hover:animate-ping"></span>
+            <h4 class="text-white font-bold uppercase tracking-widest text-xs sm:text-sm drop-shadow-md">Goa<br/>Infrastructure</h4>
           </div>
         </div>
 
@@ -293,79 +302,76 @@ const rentalsSchema = {
     </section>
 
     <!-- ==========================================
-         6. RE-VAMPED INTERACTIVE FAQs
+         6. INTERACTIVE FAQs (Light Theme)
          ========================================== -->
-    <section class="py-20 bg-[#0a170e] border-b border-emerald-500/10 relative">
+    <section class="py-20 bg-slate-50 border-b border-slate-200 relative">
       <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         
         <div class="text-center mb-12">
-          <h2 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight mb-4">Frequently Asked <span class="text-emerald-400">Questions</span></h2>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 uppercase tracking-tight mb-4">Frequently Asked <span class="text-emerald-600">Questions</span></h2>
         </div>
 
         <div class="space-y-4">
           
-          <!-- Accordion Item 1 -->
-          <div class="faq-item bg-[#050f09] border border-white/10 rounded-sm overflow-hidden transition-all duration-300">
+          <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 shadow-sm">
             <button class="faq-btn w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none group">
-              <h4 class="text-white group-hover:text-emerald-400 font-bold uppercase tracking-wider text-sm sm:text-base pr-4 transition-colors">What is the minimum rental period?</h4>
-              <svg class="w-5 h-5 text-emerald-500 transform transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              <h4 class="text-slate-800 group-hover:text-emerald-700 font-bold uppercase tracking-wider text-sm sm:text-base pr-4 transition-colors">What is the minimum rental period?</h4>
+              <svg class="w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-              <div class="p-6 sm:p-8 pt-0 font-jakarta text-sm sm:text-base text-zinc-400 leading-relaxed">
-                Rental duration depends on project requirements. Contact our team for customized rental plans
+              <div class="p-6 sm:p-8 pt-0 text-sm sm:text-base text-slate-600 leading-relaxed font-medium border-t border-slate-100 mt-2">
+                Rental duration depends on project requirements. Contact our team for customized rental plans.
               </div>
             </div>
           </div>
 
-          <!-- Accordion Item 2 -->
-          <div class="faq-item bg-[#050f09] border border-white/10 rounded-sm overflow-hidden transition-all duration-300">
+          <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 shadow-sm">
             <button class="faq-btn w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none group">
-              <h4 class="text-white group-hover:text-emerald-400 font-bold uppercase tracking-wider text-sm sm:text-base pr-4 transition-colors">Can Staircase Towers be used on industrial projects?</h4>
-              <svg class="w-5 h-5 text-emerald-500 transform transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              <h4 class="text-slate-800 group-hover:text-emerald-700 font-bold uppercase tracking-wider text-sm sm:text-base pr-4 transition-colors">Can Staircase Towers be used on industrial projects?</h4>
+              <svg class="w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-              <div class="p-6 sm:p-8 pt-0 font-jakarta text-sm sm:text-base text-zinc-400 leading-relaxed">
+              <div class="p-6 sm:p-8 pt-0 text-sm sm:text-base text-slate-600 leading-relaxed font-medium border-t border-slate-100 mt-2">
                 Yes. They are widely used in industrial plants, refineries, bullet trains and metrorail projects, infrastructure projects, shipyards, and high-rise construction.
               </div>
             </div>
           </div>
 
-          <!-- Accordion Item 3 -->
-          <div class="faq-item bg-[#050f09] border border-white/10 rounded-sm overflow-hidden transition-all duration-300">
+          <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 shadow-sm">
             <button class="faq-btn w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none group">
-              <h4 class="text-white group-hover:text-emerald-400 font-bold uppercase tracking-wider text-sm sm:text-base pr-4 transition-colors">Are installation services available?</h4>
-              <svg class="w-5 h-5 text-emerald-500 transform transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              <h4 class="text-slate-800 group-hover:text-emerald-700 font-bold uppercase tracking-wider text-sm sm:text-base pr-4 transition-colors">Are installation services available?</h4>
+              <svg class="w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-              <div class="p-6 sm:p-8 pt-0 font-jakarta text-sm sm:text-base text-zinc-400 leading-relaxed">
+              <div class="p-6 sm:p-8 pt-0 text-sm sm:text-base text-slate-600 leading-relaxed font-medium border-t border-slate-100 mt-2">
                 Yes. We provide expert guidance and support on the erection/installation process. We can also arrange skilled labor for erection work, if required, at an additional cost.
               </div>
             </div>
           </div>
 
-           <div class="faq-item bg-[#050f09] border border-white/10 rounded-sm overflow-hidden transition-all duration-300">
+          <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 shadow-sm">
             <button class="faq-btn w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none group">
-              <h4 class="text-white group-hover:text-emerald-400 font-bold uppercase tracking-wider text-sm sm:text-base pr-4 transition-colors">Can the tower height be customized?</h4>
-              <svg class="w-5 h-5 text-emerald-500 transform transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              <h4 class="text-slate-800 group-hover:text-emerald-700 font-bold uppercase tracking-wider text-sm sm:text-base pr-4 transition-colors">Can the tower height be customized?</h4>
+              <svg class="w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-              <div class="p-6 sm:p-8 pt-0 font-jakarta text-sm sm:text-base text-zinc-400 leading-relaxed">
-                Yes. The modular design allows towers to be configured for different project heights
+              <div class="p-6 sm:p-8 pt-0 text-sm sm:text-base text-slate-600 leading-relaxed font-medium border-t border-slate-100 mt-2">
+                Yes. The modular design allows towers to be configured for different project heights.
               </div>
             </div>
           </div>
-                     <div class="faq-item bg-[#050f09] border border-white/10 rounded-sm overflow-hidden transition-all duration-300">
+          
+          <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 shadow-sm">
             <button class="faq-btn w-full text-left p-6 sm:p-8 flex justify-between items-center focus:outline-none group">
-              <h4 class="text-white group-hover:text-emerald-400 font-bold uppercase tracking-wider text-sm sm:text-base pr-4 transition-colors">Is transportation included?</h4>
-              <svg class="w-5 h-5 text-emerald-500 transform transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              <h4 class="text-slate-800 group-hover:text-emerald-700 font-bold uppercase tracking-wider text-sm sm:text-base pr-4 transition-colors">Is transportation included?</h4>
+              <svg class="w-5 h-5 text-emerald-600 transform transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-              <div class="p-6 sm:p-8 pt-0 font-jakarta text-sm sm:text-base text-zinc-400 leading-relaxed">
-                Transportation can be arranged based on project location and rental scope
+              <div class="p-6 sm:p-8 pt-0 text-sm sm:text-base text-slate-600 leading-relaxed font-medium border-t border-slate-100 mt-2">
+                Transportation can be arranged based on project location and rental scope.
               </div>
             </div>
           </div>
-
           
         </div>
 
@@ -373,27 +379,32 @@ const rentalsSchema = {
     </section>
 
     <!-- ==========================================
-         7. FINAL CTA
+         7. FINAL CTA (Heavy Glassmorphism)
          ========================================== -->
-    <section class="py-20 relative bg-[#050f09] overflow-hidden border-t border-emerald-500/20">
-      <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 blur-[150px] rounded-full pointer-events-none"></div>
+    <section class="py-24 relative bg-white overflow-hidden">
+      <!-- Background Image to make the glass pop -->
+      <div class="absolute inset-0 z-0">
+        <Image src={finalImg} alt="Background" class="w-full h-full object-cover opacity-20 grayscale" />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-slate-50/80 to-transparent"></div>
+      </div>
 
-      <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center bg-[#0a170e]/80 backdrop-blur-xl border border-emerald-500/30 rounded-xl p-10 sm:p-16 shadow-[0_0_50px_rgba(16,185,129,0.1)]">
+      <div class="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center bg-white/70 backdrop-blur-xl border border-white rounded-2xl p-10 sm:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
         
-        <h2 class="text-3xl sm:text-4xl font-black text-white uppercase tracking-tight mb-6">
-          Secure Your <span class="text-emerald-400">Rental Equipment</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 uppercase tracking-tight mb-6">
+          Secure Your <span class="text-emerald-600">Rental Equipment</span>
         </h2>
         
-        <p class="font-jakarta text-zinc-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-10 font-medium">
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-10 font-medium">
           Inventory for Staircase Towers moves incredibly fast due to high demand. Contact our sales desk today to lock in your equipment for your upcoming project timeline.
         </p>
 
+        <!-- Replaced Quote with Contact Sales -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="tel:+919393161504" class="w-full sm:w-auto inline-flex h-14 items-center justify-center gap-2 rounded-sm bg-emerald-500 px-10 text-sm font-black text-[#050f09] shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_35px_rgba(16,185,129,0.5)] hover:bg-emerald-400 hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest">
+          <a href="tel:+919393161504" class="w-full sm:w-auto inline-flex h-14 items-center justify-center gap-2 rounded-sm bg-emerald-600 px-10 text-sm font-black text-white shadow-lg hover:shadow-xl hover:bg-emerald-500 hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest">
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
             Call: +91 9393161504
           </a>
-          <a href="/contact-us" class="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-sm border-2 border-emerald-500/30 bg-[#050f09] px-10 text-sm font-bold text-emerald-400 hover:border-emerald-500 hover:bg-emerald-500/10 transition-all uppercase tracking-widest">
+          <a href="/contact-us" class="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-sm border-2 border-slate-300 bg-white/60 backdrop-blur-md px-10 text-sm font-bold text-slate-800 hover:border-emerald-600 hover:text-emerald-700 shadow-sm transition-all uppercase tracking-widest">
             Send an Inquiry
           </a>
         </div>
@@ -403,11 +414,6 @@ const rentalsSchema = {
 
   </main>
 </Layout>
-
-<style is:global>
-  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-  .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
-</style>
 
 <script is:inline>
   // Simple, smooth accordion logic for FAQs
@@ -430,15 +436,16 @@ const rentalsSchema = {
         document.querySelectorAll('.faq-item svg').forEach(i => {
           i.style.transform = 'rotate(0deg)';
         });
+        // Updated active color class to match light theme
         document.querySelectorAll('.faq-item h4').forEach(h => {
-          h.classList.remove('text-emerald-400');
+          h.classList.remove('text-emerald-700');
         });
 
         // Open the clicked one if it wasn't already open
         if (!isOpen) {
           content.style.maxHeight = content.scrollHeight + 'px';
           icon.style.transform = 'rotate(180deg)';
-          title.classList.add('text-emerald-400');
+          title.classList.add('text-emerald-700');
         }
       });
     });
