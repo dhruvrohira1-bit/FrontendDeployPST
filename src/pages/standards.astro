@@ -91,81 +91,11 @@ const standards = [
   },
 
   // ── AUSTRALIAN / NEW ZEALAND STANDARDS ───────────────────────────────────
-  {
-    region: "Australia / NZ",
-    flag: "🇦🇺",
-    code: "AS/NZS 1576.1",
-    type: "Scaffolding",
-    title: "Scaffolding — General Requirements",
-    body: "Standards Australia",
-    file: "/standards/ASNZS1576.1-2010.pdf",
-  },
-  {
-    region: "Australia / NZ",
-    flag: "🇦🇺",
-    code: "AS/NZS 1576.2",
-    type: "Couplers",
-    title: "Scaffolding — Couplers and Accessories",
-    body: "Standards Australia",
-    file: "/standards/ASNZS 1576.2.2016.pdf",
-  },
-  {
-    region: "Australia / NZ",
-    flag: "🇦🇺",
-    code: "AS/NZS 4576",
-    type: "Safety",
-    title: "Guidelines for Scaffolding Safety",
-    body: "Standards Australia",
-    file: "/standards/AS 4576-1995.pdf",
-  },
-  {
-    region: "Australia / NZ",
-    flag: "🇦🇺",
-    code: "AS/NZS 4600",
-    type: "Pipes/Rods",
-    title: "Cold-Formed Steel Structures",
-    body: "Standards Australia",
-    file: "/standards/AS_NZS-4600-2005-1.pdf",
-  },
-  {
-    region: "Australia / NZ",
-    flag: "🇦🇺",
-    code: "AS 1657",
-    type: "Erection",
-    title: "Fixed Platforms, Walkways, Stairways and Ladders",
-    body: "Standards Australia",
-    file: "/standards/AS 1657-2018.pdf",
-  },
-  {
-    region: "Australia / NZ",
-    flag: "🇦🇺",
-    code: "AS 1577",
-    type: "Scaffolding",
-    title: "Scaffold Planks",
-    body: "Standards Australia",
-    file: "/standards/AS 1577-1993.pdf",
-  },
+
 
   // ── USA / INTERNATIONAL ───────────────────────────────────────────────────
 
-  {
-    region: "USA / International",
-    flag: "🇺🇸",
-    code: "OSHA 1926 Part L",
-    type: "Safety",
-    title: "Scaffolds — Subpart L",
-    body: "Occupational Safety and Health Administration",
-    file: "/standards/OSHA 1926 PART L.pdf",
-  },
-  {
-    region: "USA / International",
-    flag: "🇺🇸",
-    code: "OSHA 1926-1050",
-    type: "Safety",
-    title: "Stairways and Ladders",
-    body: "Occupational Safety and Health Administration",
-    file: "/standards/OSHA 1926 1050.pdf",
-  },
+ 
   {
     region: "USA / International",
     flag: "🇺🇸",
@@ -175,91 +105,13 @@ const standards = [
     body: "Occupational Safety and Health Administration",
     file: "/standards/OSHA_Steel_Scaffold_Standards.pdf",
   },
-  {
-    region: "USA / International",
-    flag: "🇺🇸",
-    code: "ANSI/ASSE Z359.1",
-    type: "Safety",
-    title: "Safety Requirements for Personal Fall Arrest Systems",
-    body: "American National Standards Institute",
-    file: "/standards/ANSIASSEZ359.1-2016.pdf",
-  },
-  {
-    region: "USA / International",
-    flag: "🇺🇸",
-    code: "ANSI/ASSE 10.8",
-    type: "Safety",
-    title: "Scaffolding Safety Requirements",
-    body: "American National Standards Institute",
-    file: "/standards/ANSI_ASSE_10.8-2011.pdf",
-  },
-  {
-    region: "USA / International",
-    flag: "🌐",
-    code: "ASCE 7",
-    type: "Erection",
-    title: "Minimum Design Loads for Buildings and Other Structures",
-    body: "American Society of Civil Engineers",
-    file: "/standards/ASCE.7.2002.pdf",
-  },
-  {
-    region: "USA / International",
-    flag: "🌐",
-    code: "ACI 347R",
-    type: "Erection",
-    title: "Guide to Formwork for Concrete",
-    body: "American Concrete Institute",
-    file: "/standards/ACI-347 R.pdf",
-  },
+  
 
   // ── SOUTH AFRICA ──────────────────────────────────────────────────────────
-  {
-    region: "South Africa",
-    flag: "🇿🇦",
-    code: "SANS 10085",
-    type: "Erection",
-    title: "The Erection and Use of Tube and Coupler Scaffolding",
-    body: "South African National Standards",
-    file: "/standards/SANS 10085-12004.pdf",
-  },
+
 
   // ── SIST / SLOVENIAN (EN adoptions) ───────────────────────────────────────
-  {
-    region: "SIST / EN Adoptions",
-    flag: "🇸🇮",
-    code: "SIST EN 12813",
-    type: "Erection",
-    title: "Temporary Works Equipment — Load Bearing Towers",
-    body: "Slovenian Institute for Standardization",
-    file: "/standards/SIST-EN-12813-2004.pdf",
-  },
-  {
-    region: "SIST / EN Adoptions",
-    flag: "🇸🇮",
-    code: "SIST EN 13374",
-    type: "Safety",
-    title: "Temporary Edge Protection Systems",
-    body: "Slovenian Institute for Standardization",
-    file: "/standards/SIST-EN-13374-2013-A1-2019.pdf",
-  },
-  {
-    region: "SIST / EN Adoptions",
-    flag: "🇸🇮",
-    code: "SIST EN 74",
-    type: "Couplers",
-    title: "Couplers, Spigot Pins and Baseplates for Scaffolding",
-    body: "Slovenian Institute for Standardization",
-    file: "/standards/SIST EN 74-12022.pdf",
-  },
-  {
-    region: "SIST / EN Adoptions",
-    flag: "🇸🇮",
-    code: "SIST EN 12812",
-    type: "Erection",
-    title: "Falsework — Performance Requirements and General Design",
-    body: "Slovenian Institute for Standardization",
-    file: "/standards/SIST-EN-12812-2004.pdf",
-  },
+
 ];
 
 const regions = ["All", ...Array.from(new Set(standards.map((s) => s.region)))];
