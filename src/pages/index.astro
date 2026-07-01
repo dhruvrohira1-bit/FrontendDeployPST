@@ -1,46 +1,47 @@
+
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import ringlockOpt1 from '../assets/products/Ringlock Option 1.jpeg';
 import walkway from '../assets/products/walkway plank.jpg';
 import staircase from '../assets/products/(updated) Staircase Tower with clean background.jpg';
-
+ 
 // ==========================================
 // IMAGE IMPORTS (Mapped to your exact file names)
 // ==========================================
-
+ 
 // Carousel Background Images (Directly from products folder)
-import bgImg1 from '../assets/staircase/ringlock.png';
+import bgImg1 from '../assets/products/Ringlock product.jpg';
 import bgImg2 from '../assets/walkway/staircase tower (1).jpg';
 import bgImg3 from '../assets/staircase/walkway plank (1).jpg';
-
+ 
 // Section 3: Leading Manufacturers
 import img3_1 from '../assets/home-page/(updated)3-1 (1).jpg'; 
 import img3_2 from '../assets/home-page/(updated)3-2.jpg';
-
+ 
 // Section 4: Ringlock, Towers, Planks
 import img4_1 from '../assets/home-page/(updated)4-1 (1).jpg';
 import img4_2 from '../assets/home-page/(updated)4-2 (1).jpg';
 import img4_3 from '../assets/home-page/(updated)4-3.png';
 import img4_4 from '../assets/home-page/(updated)4-4 (1).jpg';
-
+ 
 // Section 6: Sectors
 import img6_1 from '../assets/home-page/(updated)6-1.jpg';
 import img6_2 from '../assets/home-page/(updated)6-2.jpg';
 import img6_3 from '../assets/home-page/(updated)6-3.jpg';
 import img6_4 from '../assets/home-page/(updated)6-4.jpg'; 
-
+ 
 // Section 8: Product Mini-Cards
 import img8_1 from '../assets/home-page/(updated)8-1 (1).jpg';
 import img8_2 from '../assets/home-page/(updated)8-2.jpg';
 import img8_3 from '../assets/home-page/(updated)8-3.jpg';
-
+ 
 // Logos
 import logoAdani from '../assets/home-page/logo adani.png';
 import logoLT from '../assets/home-page/logo L&T.png';
 import logoTata from '../assets/home-page/logo tataprojects.jpeg';
 import logoJKumar from '../assets/home-page/logo jkumar.png';
-
+ 
 // ==========================================
 // HOME PAGE SCHEMA (SEO/GEO)
 // ==========================================
@@ -52,65 +53,78 @@ const homeSchema = {
   "description": "Top manufacturer of walkway planks, staircase towers, and ringlock scaffolding in Mumbai, India."
 };
 ---
-
+ 
 <Layout title="Prime SteelTech India Pvt Ltd | Top Scaffolding Manufacturer Mumbai">
   
   <script type="application/ld+json" set:html={JSON.stringify(homeSchema)} />
-
+ 
   <main class="bg-slate-50 text-slate-900 overflow-hidden font-jakarta">
     
     <section class="relative pt-24 pb-20 sm:pt-32 sm:pb-32 border-b border-slate-200 text-center z-10 flex flex-col justify-center min-h-[85vh] sm:min-h-[90vh]">
       
+      <!-- Carousel background: kept fully visible, no heavy overlay blocking it -->
       <div class="absolute inset-0 z-0 overflow-hidden bg-slate-50">
         <img src={bgImg1.src} alt="Ringlock Systems" class="absolute inset-0 w-full h-full object-cover opacity-0 animate-fade-1 z-0" />
         <img src={bgImg2.src} alt="Staircase Towers" class="absolute inset-0 w-full h-full object-cover opacity-0 animate-fade-2 z-0" />
         <img src={bgImg3.src} alt="Walkway Planks" class="absolute inset-0 w-full h-full object-cover opacity-0 animate-fade-3 z-0" />
-        
-        <div class="absolute inset-0 bg-slate-900/40- backdrop-blur-[2px]"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-50/95 via-transparent to-slate-50 z-10"></div>
+ 
+        <!-- Very light scrim only, just enough to keep badges/edges legible; the real contrast now comes from the glass panel around the text -->
+        <div class="absolute inset-0 bg-slate-900/5"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-50/50 via-transparent to-slate-50/60 z-10"></div>
       </div>
-
+ 
       <div class="relative z-20 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        
-        <div class="flex flex-wrap justify-center gap-3 mb-8">
-          <div class="inline-flex items-center gap-2 rounded-full border border-emerald-600/30 bg-emerald-50/80 backdrop-blur-md px-4 py-2 text-[10px] sm:text-xs font-bold text-emerald-700 uppercase tracking-widest shadow-sm">
-            <span class="flex h-2 w-2 shrink-0 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>26+ Years of Industry Trust</span>
+ 
+        <!-- READABILITY PANEL: frosted glass card that separates text from the moving carousel behind it, while the carousel stays fully visible outside the card edges -->
+        <div class="w-full rounded-2xl bg-white/15 backdrop-blur-sm border border-white/70 shadow-[0_25px_70px_rgba(15,23,42,0.18)] px-5 py-10 sm:px-12 sm:py-14 flex flex-col items-center">
+ 
+<div class="flex flex-wrap justify-center gap-3 mb-8">
+            <div class="inline-flex items-center gap-2 rounded-full ring-2 ring-emerald-300/60 bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-2.5 text-[10px] sm:text-xs font-bold text-white uppercase tracking-widest shadow-[0_8px_30px_rgba(16,185,129,0.5)] hover:shadow-[0_8px_36px_rgba(16,185,129,0.7)] hover:scale-105 transition-all duration-300">
+              <span class="relative flex h-2.5 w-2.5 shrink-0">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+              </span>
+              <span>26+ Years of Industry Trust</span>
+            </div>
+            <div class="hidden sm:inline-flex items-center gap-2 rounded-full ring-2 ring-slate-700/40 bg-slate-900 px-5 py-2.5 text-[10px] font-bold text-white uppercase tracking-widest shadow-[0_8px_30px_rgba(15,23,42,0.5)] hover:shadow-[0_8px_36px_rgba(15,23,42,0.7)] hover:scale-105 transition-all duration-300">
+              <svg class="h-3.5 w-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              BS/EN/OSHA/IS Compliant
+            </div>
           </div>
-          <div class="hidden sm:inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/60 backdrop-blur-md px-4 py-2 text-[10px] font-bold text-slate-600 uppercase tracking-widest">
-            BIS & OSHA Compliant
+ 
+          <h1 class="flex flex-col items-center justify-center space-y-3 sm:space-y-4 max-w-5xl">
+            <span class="text-4xl sm:text-5xl lg:text-7xl font-black text-slate-900 uppercase tracking-tight leading-[1.1] sm:leading-[1.1]">
+              Best In Class Scaffolding Manufacturers in India
+            </span>
+            <span class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-700 uppercase tracking-tight leading-snug">
+              Anti Skid Walkway Planks <span class="text-slate-300 mx-2 hidden sm:inline">&bull;</span><br class="block sm:hidden" /> Scaffolding Staircase Towers <br class ="block sm:hidden" /> Modular Ringlock Systems
+            </span>
+          </h1>
+ 
+          <div class="mt-8 flex flex-col items-center space-y-4 max-w-4xl">
+            <p class="text-sm sm:text-base lg:text-lg text-slate-700 leading-relaxed text-center font-medium">
+              Engineered for India's toughest projects, Prime SteelTech India Pvt Ltd provides EN/BS/OSHO/BIS certified Ringlock & Cuplock Systems, GI Planks, Scaffolding Staircase Towers and other Modular Scaffolding Systems & Formworks.
+            </p>
+            <p class="text-xs sm:text-sm lg:text-base text-slate-500 leading-relaxed text-center max-w-3xl">
+              With decades of expertise serving in India, Gulf and African countries, our systems ensure rock-solid stability and safety for diverse infrastructure and industrial projects. We also assist you throughout the project by providing services such as consultancy, personalization, erection & estimation of materials required for your project.
+            </p>
           </div>
+ 
+          <div class="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+            <a href="/quote" onclick="gtag('event', 'click_quote', {'location': 'hero'});" class="relative group w-full sm:w-auto inline-flex h-14 min-w-[220px] items-center justify-center rounded-sm bg-emerald-600 px-8 text-sm font-extrabold text-white shadow-lg hover:shadow-xl hover:bg-emerald-500 active:scale-[0.98] transition-all duration-300 uppercase tracking-widest z-10">
+              <span class="relative z-20">Get a Quote</span>
+            </a>
+            <a href="/products" onclick="gtag('event', 'click_view_products', {'location': 'hero'});" class="w-full sm:w-auto inline-flex h-14 min-w-[220px] items-center justify-center rounded-sm border-2 border-emerald-600 bg-white/60 backdrop-blur-md px-8 text-sm font-bold text-emerald-700 hover:text-white hover:bg-emerald-600 active:bg-emerald-700 transition-all duration-300 uppercase tracking-widest shadow-sm">
+              View Products
+            </a>
+          </div>
+ 
         </div>
-
-        <h1 class="flex flex-col items-center justify-center space-y-3 sm:space-y-4 max-w-5xl">
-          <span class="text-4xl sm:text-5xl lg:text-7xl font-black text-slate-900 uppercase tracking-tight leading-[1.1] sm:leading-[1.1]">
-            Best In Class Scaffolding Manufacturers in India
-          </span>
-          <span class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-700 uppercase tracking-tight leading-snug">
-            Anti Skid Walkway Planks <span class="text-slate-300 mx-2 hidden sm:inline">&bull;</span><br class="block sm:hidden" /> Scaffolding Staircase Towers <br class ="block sm:hidden" /> Modular Ringlock Systems
-          </span>
-        </h1>
-
-        <div class="mt-8 flex flex-col items-center space-y-4 max-w-4xl">
-          <p class="text-sm sm:text-base lg:text-lg text-slate-700 leading-relaxed text-center font-medium">
-            Engineered for India's toughest projects, Prime SteelTech India Pvt Ltd provides EN/BS/OSHO/BIS certified Ringlock & Cuplock Systems, Anti skid walkway planks, Scaffolding Staircase Towers and other Modular Scaffolding Systems & Formworks.
-          </p>
-          <p class="text-xs sm:text-sm lg:text-base text-slate-500 leading-relaxed text-center max-w-3xl">
-            With decades of expertise serving in India, Gulf and African countries, our systems ensure rock-solid stability and safety for diverse infrastructure and industrial projects. We also assist you throughout the project by providing services such as consultancy, personalization, erection & estimation of materials required for your project.
-          </p>
-        </div>
-
-        <div class="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-          <a href="/quote" class="relative group w-full sm:w-auto inline-flex h-14 min-w-[220px] items-center justify-center rounded-sm bg-emerald-600 px-8 text-sm font-extrabold text-white shadow-lg hover:shadow-xl hover:bg-emerald-500 active:scale-[0.98] transition-all duration-300 uppercase tracking-widest z-10">
-            <span class="relative z-20">Get a Quote</span>
-          </a>
-          <a href="/products" class="w-full sm:w-auto inline-flex h-14 min-w-[220px] items-center justify-center rounded-sm border-2 border-emerald-600 bg-white/60 backdrop-blur-md px-8 text-sm font-bold text-emerald-700 hover:text-white hover:bg-emerald-600 active:bg-emerald-700 transition-all duration-300 uppercase tracking-widest shadow-sm">
-            View Products
-          </a>
-        </div>
+        <!-- END READABILITY PANEL -->
+ 
       </div>
     </section>
-
+ 
     <section class="py-16 sm:py-24 border-b border-slate-200 relative bg-white">
       <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         
@@ -123,7 +137,7 @@ const homeSchema = {
             Prime SteelTech India is redefining the industry through a next-generation digital platform. This combines instant quoting and real-time specifications with faster procurement, merging engineering heritage with digital efficiency
           </p>
         </div>
-
+ 
         <div class="relative w-full max-w-4xl aspect-video rounded-md overflow-hidden shadow-2xl border border-slate-200 bg-black">
           <iframe 
             class="absolute top-0 left-0 w-full h-full border-0"
@@ -135,10 +149,10 @@ const homeSchema = {
           </iframe>
         </div>
         <p class="mt-4 text-xs text-emerald-600 uppercase tracking-widest font-bold">Watch our manufacturing process in action</p>
-
+ 
       </div>
     </section>
-
+ 
     <section class="py-16 sm:py-24 border-b border-slate-200 relative overflow-hidden bg-slate-50">
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
@@ -152,34 +166,34 @@ const homeSchema = {
                 Deep dive into our modular ringlock architecture, high-tensile steel planks, and heavy-duty robust industrial staircase systems.
               </p>
               
-              <a href="/contact-us" class="inline-flex items-center gap-2 text-emerald-700 font-bold text-sm uppercase tracking-widest hover:text-emerald-800 transition-colors mb-10 border-b-2 border-emerald-500 pb-1">
+              <a href="/contact-us" onclick="gtag('event', 'click_contact', {'location': 'extreme_loads_section'});" class="inline-flex items-center gap-2 text-emerald-700 font-bold text-sm uppercase tracking-widest hover:text-emerald-800 transition-colors mb-10 border-b-2 border-emerald-500 pb-1">
                 Discuss Your Project Specifications &rarr;
               </a>
               
               <div class="grid grid-cols-3 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
-                <a href="/products/walkway-planks" class="bg-slate-100 rounded-sm aspect-square relative border border-slate-200 hover:border-emerald-500 transition-colors flex items-end p-2 sm:p-3 shadow-inner group/card cursor-pointer overflow-hidden">
+                <a href="/products/walkway-planks" onclick="gtag('event', 'click_product_card', {'location': 'extreme_loads_section', 'product': 'walkway-planks'});" class="bg-slate-100 rounded-sm aspect-square relative border border-slate-200 hover:border-emerald-500 transition-colors flex items-end p-2 sm:p-3 shadow-inner group/card cursor-pointer overflow-hidden">
                   <span class="text-[9px] sm:text-[10px] font-bold text-white uppercase tracking-wider relative z-20 group-hover/card:text-emerald-400 transition-colors drop-shadow-md">Walkway Planks</span>
                   <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent z-10"></div>
                   <Image src={img8_1} class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover/card:scale-110 transition-all duration-500" alt="Planks" />
                 </a>
-                <a href="/products/staircase-tower" class="bg-slate-100 rounded-sm aspect-square relative border border-slate-200 hover:border-emerald-500 transition-colors flex items-end p-2 sm:p-3 shadow-inner group/card cursor-pointer overflow-hidden">
+                <a href="/products/staircase-tower" onclick="gtag('event', 'click_product_card', {'location': 'extreme_loads_section', 'product': 'staircase-tower'});" class="bg-slate-100 rounded-sm aspect-square relative border border-slate-200 hover:border-emerald-500 transition-colors flex items-end p-2 sm:p-3 shadow-inner group/card cursor-pointer overflow-hidden">
                   <span class="text-[9px] sm:text-[10px] font-bold text-white uppercase tracking-wider relative z-20 group-hover/card:text-emerald-400 transition-colors drop-shadow-md">Staircase Towers</span>
                   <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent z-10"></div>
                   <Image src={img8_2} class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover/card:scale-110 transition-all duration-500" alt="Towers" />
                 </a>
-                <a href="/products/ringlock-scaffolding" class="bg-slate-100 rounded-sm aspect-square relative border border-slate-200 hover:border-emerald-500 transition-colors flex items-end p-2 sm:p-3 shadow-inner group/card cursor-pointer overflow-hidden">
+                <a href="/products/ringlock-scaffolding" onclick="gtag('event', 'click_product_card', {'location': 'extreme_loads_section', 'product': 'ringlock-scaffolding'});" class="bg-slate-100 rounded-sm aspect-square relative border border-slate-200 hover:border-emerald-500 transition-colors flex items-end p-2 sm:p-3 shadow-inner group/card cursor-pointer overflow-hidden">
                   <span class="text-[9px] sm:text-[10px] font-bold text-white uppercase tracking-wider relative z-20 group-hover/card:text-emerald-400 transition-colors drop-shadow-md">Ringlock Systems</span>
                   <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent z-10"></div>
                   <Image src={img8_3} class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover/card:scale-110 transition-all duration-500" alt="Nodes" />
                 </a>
               </div>
             </div>
-
-            <a href="/products" class="mt-auto inline-flex h-14 w-full items-center justify-center rounded-sm border border-emerald-200 bg-emerald-50 px-8 text-sm font-bold text-emerald-700 hover:bg-emerald-600 hover:text-white transition-all duration-300 uppercase tracking-widest relative z-10">
+ 
+            <a href="/products" onclick="gtag('event', 'click_view_products', {'location': 'extreme_loads_section'});" class="mt-auto inline-flex h-14 w-full items-center justify-center rounded-sm border border-emerald-200 bg-emerald-50 px-8 text-sm font-bold text-emerald-700 hover:bg-emerald-600 hover:text-white transition-all duration-300 uppercase tracking-widest relative z-10">
               VIEW ALL PRODUCTS
             </a>
           </div>
-
+ 
           <div class="flex flex-col bg-slate-900 rounded-lg p-8 sm:p-12 shadow-xl relative overflow-hidden border-t-4 border-emerald-500 transform hover:-translate-y-1 transition-transform duration-300 z-10 text-center lg:text-left group">
              <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-bl-full pointer-events-none z-0"></div>
              
@@ -191,7 +205,7 @@ const homeSchema = {
                  </span>
                  <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400">Instant Pricing</span>
                </div>
-
+ 
                <h2 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight mb-4">
                  THE <span class="text-emerald-500">QUOTE ENGINE</span>
                </h2>
@@ -207,17 +221,17 @@ const homeSchema = {
                </div>
              </div>
              
-             <a href="/quote" class="mt-auto w-full relative inline-flex h-14 items-center justify-center rounded-sm bg-emerald-500 px-8 text-sm font-extrabold text-slate-900 shadow-md hover:bg-emerald-400 transition-colors duration-300 uppercase tracking-widest overflow-hidden z-10">
+             <a href="/quote" onclick="gtag('event', 'click_quote', {'location': 'quote_engine_card'});" class="mt-auto w-full relative inline-flex h-14 items-center justify-center rounded-sm bg-emerald-500 px-8 text-sm font-extrabold text-slate-900 shadow-md hover:bg-emerald-400 transition-colors duration-300 uppercase tracking-widest overflow-hidden z-10">
                <span class="relative z-20 flex items-center gap-2">
                  GENERATE INSTANT QUOTE &rarr;
                </span>
              </a>
           </div>
-
+ 
         </div>
       </div>
     </section>
-
+ 
     <section class="py-16 sm:py-24 border-b border-slate-200 relative overflow-hidden bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -237,10 +251,10 @@ const homeSchema = {
               </div>
             </div>
           </div>
-
+ 
           <div class="order-1 lg:order-2">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 uppercase tracking-tight mb-6 leading-tight">
-              Leading Manufacturers of <span class="text-emerald-600">Scaffolding Staircase Towers and AntiSkid Walkway Planks</span> Across India
+              Leading Manufacturers of <span class="text-emerald-600">Scaffolding Staircase Towers and GI Planks</span> Across India
             </h2>
             <div class="space-y-6 text-slate-600 text-sm sm:text-base leading-relaxed font-medium">
               <p>
@@ -262,11 +276,11 @@ const homeSchema = {
               </li>
             </ul>
           </div>
-
+ 
         </div>
       </div>
     </section>
-
+ 
     <section class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
@@ -287,22 +301,22 @@ const homeSchema = {
               </p>
             </div>
             
-            <a href="/contact-us" class="inline-flex items-center justify-center rounded-sm bg-slate-900 px-6 py-3 text-xs font-bold text-white uppercase tracking-widest hover:bg-slate-800 transition-colors">
+            <a href="/contact-us" onclick="gtag('event', 'click_contact', {'location': 'ringlock_section'});" class="inline-flex items-center justify-center rounded-sm bg-slate-900 px-6 py-3 text-xs font-bold text-white uppercase tracking-widest hover:bg-slate-800 transition-colors">
               Contact Engineering Team &rarr;
             </a>
           </div>
-
+ 
           <div class="grid grid-cols-2 gap-4 sm:gap-6 relative">
              <Image src={img4_1} class="w-full h-56 sm:h-72 object-cover rounded-lg shadow-md relative z-10" alt="Ringlock Scaffolding Structure" />
              <Image src={img4_2} class="w-full h-56 sm:h-72 object-cover rounded-lg shadow-md relative z-10 transform translate-y-6 sm:translate-y-8" alt="Industrial Ringlock Nodes" />
           </div>
         </div>
-
+ 
         <div class="bg-white border border-slate-200 rounded-lg p-8 sm:p-12 shadow-sm relative overflow-hidden mt-12 sm:mt-24">
            <h3 class="text-xl sm:text-2xl font-black text-slate-900 uppercase tracking-tight mb-10 text-center sm:text-left relative z-10">
              Best <span class="text-emerald-600">Scaffolding Staircase Towers</span> and <span class="text-emerald-600">AntiSkid Walkway Planks</span> in India
            </h3>
-
+ 
            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 relative z-10">
              <div class="flex flex-col sm:flex-row gap-6 items-start group">
                 <div class="w-full sm:w-40 h-40 shrink-0 rounded-md overflow-hidden border border-slate-200 relative">
@@ -313,28 +327,28 @@ const homeSchema = {
                   <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-2">
                     Designed to safely handle heavy daily foot traffic. Our multi-level staircase towers feature secure interlocking parts, wide landing areas, and comfortable steps.
                   </p>
-                  <a href="/products/staircase-tower" class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest hover:underline">View Specs &rarr;</a>
+                  <a href="/products/staircase-tower" onclick="gtag('event', 'click_view_specs', {'location': 'staircase_towers_and_planks_section', 'product': 'staircase-tower'});" class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest hover:underline">View Specs &rarr;</a>
                 </div>
              </div>
-
+ 
              <div class="flex flex-col sm:flex-row gap-6 items-start group">
                 <div class="w-full sm:w-40 h-40 shrink-0 rounded-md overflow-hidden border border-slate-200 relative">
                   <Image src={img4_4} class="w-full h-full object-cover transform group-hover:scale-110 transition-duration-500" alt="Steel Walkway Planks" />
                 </div>
                 <div>
-                  <h4 class="text-slate-900 font-bold uppercase tracking-wider mb-2 text-sm group-hover:text-emerald-600 transition-colors">Anti Skid Walkway Planks</h4>
+                  <h4 class="text-slate-900 font-bold uppercase tracking-wider mb-2 text-sm group-hover:text-emerald-600 transition-colors"> GI Planks</h4>
                   <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-2">
                     Engineered with a perforated anti skid surface to prevent slips and falls. Integrated with welded stiffeners ensuring they resist bending and sagging under heavy loads.
                   </p>
-                  <a href="/products/walkway-planks" class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest hover:underline">View Specs &rarr;</a>
+                  <a href="/products/walkway-planks" onclick="gtag('event', 'click_view_specs', {'location': 'staircase_towers_and_planks_section', 'product': 'walkway-planks'});" class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest hover:underline">View Specs &rarr;</a>
                 </div>
              </div>
            </div>
         </div>
-
+ 
       </div>
     </section>
-
+ 
     <section class="relative py-16 bg-[#064E3B] border-b border-slate-200 overflow-hidden">
       <div class="absolute inset-0 opacity-10 mix-blend-overlay grayscale">
         <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2000&auto=format&fit=crop" alt="Industrial Steel Background" class="w-full h-full object-cover" />
@@ -361,7 +375,7 @@ const homeSchema = {
         </div>
       </div>
     </section>
-
+ 
     <section class="py-16 sm:py-24 bg-white border-b border-slate-200">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
@@ -372,11 +386,11 @@ const homeSchema = {
           <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-medium mb-6">
             From towering commercial skyscrapers to heavy civil infrastructure, our modular scaffolding and structural systems are deployed in the most demanding environments.
           </p>
-          <a href="/contact-us" class="inline-flex items-center gap-2 text-emerald-700 font-bold text-sm uppercase tracking-widest hover:text-emerald-800 transition-colors border-b-2 border-emerald-500 pb-1">
+          <a href="/contact-us" onclick="gtag('event', 'click_contact', {'location': 'sectors_section'});" class="inline-flex items-center gap-2 text-emerald-700 font-bold text-sm uppercase tracking-widest hover:text-emerald-800 transition-colors border-b-2 border-emerald-500 pb-1">
             Partner With Us For Your Next Build &rarr;
           </a>
         </div>
-
+ 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="bg-slate-50 border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md hover:border-emerald-300 transition-all duration-300 group flex flex-col">
             <div class="h-48 overflow-hidden relative">
@@ -390,7 +404,7 @@ const homeSchema = {
               <p class="text-sm text-slate-600 leading-relaxed">Ringlock systems rated for multi-story construction and demanding urban projects, ensuring structural rigidity at any height and the ability to withstand forces such as wind.</p>
             </div>
           </div>
-
+ 
           <div class="bg-slate-50 border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md hover:border-emerald-300 transition-all duration-300 group flex flex-col">
             <div class="h-48 overflow-hidden relative">
               <Image src={img6_2} class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" alt="Bridge Infrastructure Scaffolding" />
@@ -403,7 +417,7 @@ const homeSchema = {
               <p class="text-sm text-slate-600 leading-relaxed"> Heavy-duty modular systems like Ringlock and Cuplock, effective for sites with complex curvature, used for ship construction, offshore platforms, and marine fabrication.</p>
             </div>
           </div>
-
+ 
           <div class="bg-slate-50 border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md hover:border-emerald-300 transition-all duration-300 group flex flex-col">
             <div class="h-48 overflow-hidden relative">
               <Image src={img6_3} class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" alt="Industrial Refinery Scaffolding" />
@@ -416,7 +430,7 @@ const homeSchema = {
               <p class="text-sm text-slate-600 leading-relaxed">Robust systems for steel plants and refineries that significantly reduce maintenance downtime.</p>
             </div>
           </div>
-
+ 
           <div class="bg-slate-50 border border-slate-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md hover:border-emerald-300 transition-all duration-300 group flex flex-col">
             <div class="h-48 overflow-hidden relative">
               <Image src={img6_4} class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" alt="Architectural Building Scaffolding" />
@@ -432,7 +446,7 @@ const homeSchema = {
         </div>
       </div>
     </section>
-
+ 
     <section class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200 relative">
       <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         
@@ -440,7 +454,7 @@ const homeSchema = {
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
           Comprehensive Resource Document
         </div>
-
+ 
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 uppercase tracking-tight mb-6">
           The Official <span class="text-emerald-600">Buyer's Guide</span>
         </h2>
@@ -448,9 +462,9 @@ const homeSchema = {
         <p class="text-slate-600 text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
           Navigate the complexities of industrial scaffolding procurement. Download our complete Buyer's Guide for detailed product specifications, load-bearing capacities, material grades, and compliance certifications.
         </p>
-
+ 
         <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-6xl">
-          <a href="/products/ringlock-guide" class="group relative block rounded-sm overflow-hidden border border-emerald-500/10 hover:border-emerald-500/40 transition-colors">
+          <a href="/products/ringlock-guide" onclick="gtag('event', 'click_buyers_guide', {'location': 'buyers_guide_section', 'guide': 'ringlock'});" class="group relative block rounded-sm overflow-hidden border border-emerald-500/10 hover:border-emerald-500/40 transition-colors">
             <div class="aspect-[4/3] overflow-hidden relative">
               <img src={ringlockOpt1.src} alt="Construction team reviewing scaffolding plans" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
@@ -460,8 +474,8 @@ const homeSchema = {
               <h3 class="text-white font-black text-xl sm:text-2xl uppercase leading-tight">Ringlock Buyer's Guide</h3>
             </div>
           </a>
-
-          <a href="/products/walkway-guide" class="group relative block rounded-sm overflow-hidden border border-emerald-500/10 hover:border-emerald-500/40 transition-colors">
+ 
+          <a href="/products/walkway-guide" onclick="gtag('event', 'click_buyers_guide', {'location': 'buyers_guide_section', 'guide': 'walkway'});" class="group relative block rounded-sm overflow-hidden border border-emerald-500/10 hover:border-emerald-500/40 transition-colors">
             <div class="aspect-[4/3] overflow-hidden relative">
               <img src={walkway.src} alt="Worker planning walkway plank installation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
@@ -471,8 +485,8 @@ const homeSchema = {
               <h3 class="text-white font-black text-xl sm:text-2xl uppercase leading-tight">Walkway Plank Buyer's Guide</h3>
             </div>
           </a>
-
-          <a href="/products/staircase-guide" class="group relative block rounded-sm overflow-hidden border border-emerald-500/10 hover:border-emerald-500/40 transition-colors">
+ 
+          <a href="/products/staircase-guide" onclick="gtag('event', 'click_buyers_guide', {'location': 'buyers_guide_section', 'guide': 'staircase'});" class="group relative block rounded-sm overflow-hidden border border-emerald-500/10 hover:border-emerald-500/40 transition-colors">
             <div class="aspect-[4/3] overflow-hidden relative">
               <img src={staircase.src} alt="Team discussion at construction site" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
@@ -485,7 +499,7 @@ const homeSchema = {
         </div>
       </div>
     </section>
-
+ 
     <section class="py-16 sm:py-24 bg-white border-b border-slate-200">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
@@ -497,11 +511,11 @@ const homeSchema = {
             We eliminated the friction of industrial sourcing. Moving from complex dimensional matrices to on-site delivery has never been this efficient.
           </p>
         </div>
-
+ 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 relative">
           
           <div class="hidden md:block absolute top-1/4 left-1/6 w-2/3 h-0.5 bg-slate-200 border-t border-dashed border-slate-300 z-0"></div>
-
+ 
           <div class="relative z-10 flex flex-col items-center text-center group">
             <div class="w-20 h-20 rounded-full bg-white border-2 border-emerald-500 shadow-md flex items-center justify-center mb-6 relative overflow-hidden">
                <span class="text-2xl font-black text-emerald-600">1</span>
@@ -514,7 +528,7 @@ const homeSchema = {
               Determine the ideal scaffolding specifications tailored to your dimensional requirements.
             </p>
           </div>
-
+ 
           <div class="relative z-10 flex flex-col items-center text-center group">
             <div class="w-20 h-20 rounded-full bg-white border-2 border-emerald-500 shadow-md flex items-center justify-center mb-6 relative overflow-hidden">
                <span class="text-2xl font-black text-emerald-600">2</span>
@@ -527,7 +541,7 @@ const homeSchema = {
               Receive immediate quotations and detailed technical data as our platform automatically identifies every necessary part for your project.
             </p>
           </div>
-
+ 
           <div class="relative z-10 flex flex-col items-center text-center group">
             <div class="w-20 h-20 rounded-full bg-white border-2 border-emerald-500 shadow-md flex items-center justify-center mb-6 relative overflow-hidden">
                <span class="text-2xl font-black text-emerald-600">3</span>
@@ -540,11 +554,11 @@ const homeSchema = {
               Orders from our high-capacity inventory are shipped via an efficient network covering MMRDA, Maharashtra, and Western India.
             </p>
           </div>
-
+ 
         </div>
       </div>
     </section>
-
+ 
     <section class="py-16 bg-slate-50 overflow-hidden border-t border-slate-200">
       <div class="w-full bg-[#064E3B] py-4 mb-16 flex overflow-hidden relative shadow-inner">
         <div class="animate-marquee flex whitespace-nowrap items-center">
@@ -560,7 +574,7 @@ const homeSchema = {
           </div>
         </div>
       </div>
-
+ 
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h3 class="text-center text-sm font-bold text-slate-500 uppercase tracking-widest mb-10">Trusted by Tier-1 Infrastructure Developers</h3>
         
@@ -570,9 +584,9 @@ const homeSchema = {
           <Image src={logoTata} alt="Tata Projects" class="h-12 sm:h-14 w-auto object-contain mx-auto" />
           <Image src={logoJKumar} alt="J. Kumar" class="h-12 sm:h-14 w-auto object-contain mx-auto" />
         </div>
-
+ 
         <div class="mt-16 text-center">
-          <a href="/our-projects" class="relative group inline-flex h-14 items-center justify-center gap-3 rounded-sm border-2 border-emerald-600 bg-white px-10 text-sm font-black text-emerald-700 hover:bg-emerald-600 hover:text-white transition-all duration-300 uppercase tracking-widest">
+          <a href="/our-projects" onclick="gtag('event', 'click_view_projects', {'location': 'trust_section'});" class="relative group inline-flex h-14 items-center justify-center gap-3 rounded-sm border-2 border-emerald-600 bg-white px-10 text-sm font-black text-emerald-700 hover:bg-emerald-600 hover:text-white transition-all duration-300 uppercase tracking-widest">
             <span class="relative z-10 flex items-center gap-2">
               Explore Major Projects
               <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -581,7 +595,7 @@ const homeSchema = {
         </div>
       </div>
     </section>
-
+ 
     <section class="py-16 sm:py-24 bg-white relative overflow-hidden border-t border-slate-200">
       <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         
@@ -600,10 +614,10 @@ const homeSchema = {
         </p>
         
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 relative z-10">
-          <a href="/contact-us" class="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-sm bg-emerald-600 px-8 text-sm font-extrabold text-white shadow-md hover:bg-emerald-500 transition-all duration-300 uppercase tracking-widest">
+          <a href="/contact-us" onclick="gtag('event', 'click_contact', {'location': 'final_cta'});" class="w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-sm bg-emerald-600 px-8 text-sm font-extrabold text-white shadow-md hover:bg-emerald-500 transition-all duration-300 uppercase tracking-widest">
             Contact Sales Team
           </a>
-          <a href="/products" class="w-full sm:w-auto inline-flex h-14 items-center justify-center gap-3 rounded-sm border-2 border-slate-200 bg-white px-8 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 uppercase tracking-widest group">
+          <a href="/products" onclick="gtag('event', 'click_view_products', {'location': 'final_cta'});" class="w-full sm:w-auto inline-flex h-14 items-center justify-center gap-3 rounded-sm border-2 border-slate-200 bg-white px-8 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 uppercase tracking-widest group">
             View All Products
             <svg class="w-4 h-4 text-emerald-600 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7-7m7-7H3" /></svg>
           </a>
@@ -611,18 +625,18 @@ const homeSchema = {
         
       </div>
     </section>
-
+ 
   </main>
-
+ 
 </Layout>
-
+ 
 <style is:global>
   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
   
   .font-jakarta {
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
-
+ 
   /* CSS Animation for Background Cross-fading */
   @keyframes fade {
     0%, 20% { opacity: 0; }
@@ -632,12 +646,12 @@ const homeSchema = {
   .animate-fade-1 { animation: fade 15s infinite; animation-delay: 0s; }
   .animate-fade-2 { animation: fade 15s infinite; animation-delay: 5s; }
   .animate-fade-3 { animation: fade 15s infinite; animation-delay: 10s; }
-
+ 
   @keyframes marquee {
     0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
   }
-
+ 
   .animate-marquee {
     width: 200%;
     animation: marquee 25s linear infinite;
